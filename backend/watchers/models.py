@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Watcher(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='watchers')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name='watchers')
     name = models.CharField(max_length=255)
     url = models.URLField(max_length=500)
     interval_seconds = models.IntegerField(default=60)  # Polling frequency in seconds
