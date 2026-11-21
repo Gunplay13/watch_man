@@ -1,6 +1,8 @@
 /* Watchman design system — design only, no business logic lives here.
    Dark theme, from the dashboard mockup: near-black background,
    dark cards, teal accent, green / amber / red status colours. */
+  @import "tailwindcss";
+
 :root {
   --wm-bg: #0b0e14;
   --wm-surface: #12151d;
