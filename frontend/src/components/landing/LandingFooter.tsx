@@ -17,7 +17,7 @@ export default function LandingFooter(): React.JSX.Element {
                 <span className="font-semibold tracking-tight text-xs text-wm-text uppercase">Watchman Monitors</span>
               </div>
               <p className="text-xs leading-relaxed max-w-sm text-wm-muted">
-                Lightweight, agentless synthetic monitoring for mission-critical APIs, SSL certificate chains, and infrastructure.
+                Synthetic API endpoint and infrastructure uptime monitoring with instant alerts for slow or dead endpoints.
               </p>
               <div className="flex items-center gap-2 text-xs text-wm-muted">
                 <Activity size={13} className="text-wm-green" />
@@ -27,18 +27,21 @@ export default function LandingFooter(): React.JSX.Element {
 
             {/* Links Col 1 */}
             <div className="space-y-2">
-              <div className="font-medium uppercase tracking-wider text-wm-text text-[11px]">Product</div>
-              <div><a href="#features" className="hover:text-wm-text transition-colors">Edge Probes</a></div>
+              <div className="font-medium uppercase tracking-wider text-wm-text text-[11px]">Monitoring</div>
+              <div><a href="#features" className="hover:text-wm-text transition-colors">Dead Endpoint Checks</a></div>
+              <div><a href="#features" className="hover:text-wm-text transition-colors">Slowdown Latency</a></div>
               <div><a href="#features" className="hover:text-wm-text transition-colors">SSL Guardian</a></div>
               <div><Link to="/register" className="hover:text-wm-text transition-colors">Get Started</Link></div>
             </div>
 
             {/* Links Col 2 */}
             <div className="space-y-2">
-              <div className="font-medium uppercase tracking-wider text-wm-text text-[11px]">Integrations</div>
-              <div className="text-wm-muted">WhatsApp Bot</div>
-              <div className="text-wm-muted">Telegram API</div>
-              <div className="text-wm-muted">Docker Telemetry</div>
+              <div className="font-medium uppercase tracking-wider text-wm-text text-[11px]">Alert Channels</div>
+              <div><a href="#channels" className="hover:text-wm-text transition-colors">Telegram</a></div>
+              <div><a href="#channels" className="hover:text-wm-text transition-colors">Slack</a></div>
+              <div><a href="#channels" className="hover:text-wm-text transition-colors">WhatsApp</a></div>
+              <div><a href="#channels" className="hover:text-wm-text transition-colors">Email</a></div>
+              <div><a href="#channels" className="hover:text-wm-text transition-colors">Discord</a></div>
             </div>
 
             {/* Links Col 3 */}

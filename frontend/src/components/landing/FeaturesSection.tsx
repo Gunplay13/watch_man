@@ -1,21 +1,21 @@
 import React from 'react';
-import { Globe, ShieldCheck, MessageSquare } from 'lucide-react';
+import { Activity, Gauge, ShieldCheck } from 'lucide-react';
 
 const FEATURES = [
   {
-    icon: Globe,
-    title: 'Global Edge Probes',
-    desc: 'Execute automated synthetic HTTP checks across multi-region edge nodes every 30 seconds to catch latency degradation before your users do.',
+    icon: Activity,
+    title: 'Dead Endpoint & Outage Detection',
+    desc: 'Catch HTTP 4xx/5xx status codes, network timeouts, and connection drops the exact second an endpoint stops responding.',
+  },
+  {
+    icon: Gauge,
+    title: 'Slow Response Warnings',
+    desc: 'Measure synthetic latency every 30 seconds. Get warned immediately when response times spike before users experience degradation.',
   },
   {
     icon: ShieldCheck,
     title: 'SSL Certificate Guardian',
-    desc: 'Continuous SNI certificate chain inspection. Receive proactive renewal alerts at 30, 14, and 3-day windows before expiration deadlines.',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Instant Chat Escalation',
-    desc: 'Direct incident traces and status codes delivered straight to on-call WhatsApp and Telegram channels in under 400 milliseconds.',
+    desc: 'Deep TLS chain inspection. Receive proactive renewal alerts at 30, 14, and 3-day windows before expiration deadlines.',
   },
 ];
 
@@ -27,10 +27,10 @@ export default function FeaturesSection(): React.JSX.Element {
           {/* Calm Section Header */}
           <div className="max-w-xl mb-16">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-wm-text mb-3">
-              Designed for clarity
+              Comprehensive endpoint reliability
             </h2>
             <p className="text-sm font-normal text-wm-muted leading-relaxed">
-              Everything you need to prevent silent outages, without the operational noise.
+              Real-time synthetic health checks designed to identify failures and performance degradation immediately.
             </p>
           </div>
 

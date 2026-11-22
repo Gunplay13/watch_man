@@ -2,6 +2,7 @@ import React from 'react';
 import LandingNavbar from '../components/landing/LandingNavbar';
 import HeroSection from '../components/landing/HeroSection';
 import FeaturesSection from '../components/landing/FeaturesSection';
+import AlertChannelsSection from '../components/landing/AlertChannelsSection';
 import CtaSection from '../components/landing/CtaSection';
 import LandingFooter from '../components/landing/LandingFooter';
 
@@ -12,6 +13,7 @@ export default function Landing(): React.JSX.Element {
       <main className="flex-1 pt-16">
         <HeroSection />
         <FeaturesSection />
+        <AlertChannelsSection />
         <CtaSection />
       </main>
       <LandingFooter />

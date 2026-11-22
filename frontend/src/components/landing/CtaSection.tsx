@@ -4,14 +4,14 @@ import { Check, ArrowRight } from 'lucide-react';
 
 export default function CtaSection(): React.JSX.Element {
   return (
-    <section className="w-full border-b border-dashed border-wm-border bg-wm-surface/20">
+    <section className="w-full border-b border-dashed border-wm-border bg-wm-surface/10">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="border-x border-dashed border-wm-border py-24 md:py-32 px-4 md:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-wm-text mb-3">
-            Eliminate silent downtime
+            Never miss an endpoint outage or slowdown
           </h2>
           <p className="text-sm font-normal text-wm-muted max-w-md mx-auto leading-relaxed mb-8">
-            Deploy your first synthetic monitor in 60 seconds. Free during developer preview.
+            Connect Telegram, Slack, WhatsApp, Email, or Discord in under 60 seconds. Free during developer preview.
           </p>
 
           <div className="flex items-center justify-center gap-3.5 flex-wrap mb-10">
@@ -33,15 +33,15 @@ export default function CtaSection(): React.JSX.Element {
           <div className="flex items-center justify-center gap-6 text-xs text-wm-muted/80 font-normal flex-wrap">
             <div className="flex items-center gap-1.5">
               <Check size={13} className="text-wm-accent" />
-              <span>No credit card required</span>
+              <span>Dead endpoint detection</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Check size={13} className="text-wm-accent" />
-              <span>WhatsApp &amp; Telegram hooks</span>
+              <span>Slowdown latency warnings</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Check size={13} className="text-wm-accent" />
-              <span>Multi-region edge probes</span>
+              <span>5 notification channels</span>
             </div>
           </div>
         </div>
