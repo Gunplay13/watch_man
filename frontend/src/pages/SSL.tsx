@@ -129,10 +129,10 @@ export default function SSL(): React.JSX.Element {
                     <td onClick={(e) => e.stopPropagation()}>
                       <span className="wm-row" style={{ gap: 4, flexWrap: 'nowrap' }}>
                         <button className="wm-iconbtn" aria-pressed={c.whatsapp} aria-label={`WhatsApp alerts for ${c.domain}`} title={`WhatsApp alerts ${c.whatsapp ? 'on' : 'off'}`}
-                          style={{ color: c.whatsapp ? '#25d366' : undefined, opacity: c.whatsapp ? 1 : 0.45 }}
+                          style={{ color: c.whatsapp ? 'var(--wm-green)' : undefined, opacity: c.whatsapp ? 1 : 0.45 }}
                           onClick={() => updateCert(c.id, { whatsapp: !c.whatsapp })}><Icon name="whatsapp" size={18} /></button>
                         <button className="wm-iconbtn" aria-pressed={c.telegram} aria-label={`Telegram alerts for ${c.domain}`} title={`Telegram alerts ${c.telegram ? 'on' : 'off'}`}
-                          style={{ color: c.telegram ? '#2aabee' : undefined, opacity: c.telegram ? 1 : 0.45 }}
+                          style={{ color: c.telegram ? 'var(--wm-blue)' : undefined, opacity: c.telegram ? 1 : 0.45 }}
                           onClick={() => updateCert(c.id, { telegram: !c.telegram })}><Icon name="telegram" size={18} /></button>
                       </span>
                     </td>

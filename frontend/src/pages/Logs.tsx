@@ -8,7 +8,7 @@ import { Level, LogEntry, SERVICES } from '../lib/mock';
 import { clock, download, fullStamp, pad, useNow } from '../lib/utils';
 
 const LEVELS: Level[] = ['INFO', 'WARN', 'ERROR', 'CRITICAL'];
-const LEVEL_COLOR: Record<Level, string> = { INFO: 'var(--wm-green)', WARN: 'var(--wm-amber)', ERROR: 'var(--wm-red)', CRITICAL: 'var(--wm-purple)' };
+const LEVEL_COLOR: Record<Level, string> = { INFO: 'var(--wm-green)', WARN: 'var(--wm-amber)', ERROR: 'var(--wm-red)', CRITICAL: 'var(--wm-red)' };
 const RANGES: [string, number][] = [['Last 5m', 5], ['Last 15m', 15], ['Last 1h', 60]];
 
 export default function Logs(): React.JSX.Element {

@@ -45,7 +45,7 @@ const DEFAULTS: Record<ChannelKey, IntegrationCfg> = {
 
 const TRIGGERS = ['HTTP 5xx Error', 'SSL Expiry < 14d', 'Disk I/O > 85%', 'Node Offline', 'Latency > 1s', 'Container Restart'];
 const sevTone = (s: Severity): Tone => (s === 'Critical' ? 'red' : s === 'Warning' ? 'amber' : 'blue');
-const chanTone = (c: Channel): Tone => (c === 'WhatsApp' ? 'green' : c === 'Telegram' ? 'blue' : c === 'Email' ? 'blue' : 'purple');
+const chanTone = (c: Channel): Tone => (c === 'WhatsApp' ? 'green' : c === 'Telegram' ? 'blue' : c === 'Email' ? 'blue' : 'grey');
 const COOLDOWNS = ['Immediate', '5m', '15m', '1h', '6h'];
 
 const SEED_RULES: Rule[] = [

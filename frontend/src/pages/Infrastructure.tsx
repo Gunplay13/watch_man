@@ -22,10 +22,10 @@ export default function Infrastructure(): React.JSX.Element {
   const net = useLiveSeries(13, 60, 50, 35, 0.08, 45);
   const disk = useLiveSeries(14, 60, 32, 14, 0.04, 40);
   const all: Series[] = [
-    { key: 'cpu', name: 'CPU', color: '#6ee7b7', data: cpu },
+    { key: 'cpu', name: 'CPU', color: 'var(--wm-green)', data: cpu },
     { key: 'mem', name: 'Memory', color: 'var(--wm-amber)', data: mem },
-    { key: 'net', name: 'Network I/O', color: '#60a5fa', data: net },
-    { key: 'disk', name: 'Disk I/O', color: '#fb7185', data: disk },
+    { key: 'net', name: 'Network I/O', color: 'var(--wm-blue)', data: net },
+    { key: 'disk', name: 'Disk I/O', color: 'var(--wm-red)', data: disk },
   ];
   const visible = all.filter((s) => !hidden.has(s.key)).map((s) => ({ ...s, data: s.data.slice(-range) }));
   const toggle = (k: string) => setHidden((h) => { const n = new Set(h); if (n.has(k)) n.delete(k); else n.add(k); return n; });
@@ -101,8 +101,8 @@ export default function Infrastructure(): React.JSX.Element {
             </div>
           ))}
         </div>
-        <div className="wm-aside-section"><b>Disk</b><LineChart series={[{ key: 'd', name: 'Disk', color: '#6ee7b7', data: disk.slice(-30) }]} height={90} yTicks={2} area format={(v) => `${Math.round(v)}k`} /></div>
-        <div className="wm-aside-section"><b>Network I/O</b><LineChart series={[{ key: 'n', name: 'Network', color: '#60a5fa', data: net.slice(-30) }]} height={90} yTicks={2} area format={(v) => `${(v / 50).toFixed(1)}M`} /></div>
+        <div className="wm-aside-section"><b>Disk</b><LineChart series={[{ key: 'd', name: 'Disk', color: 'var(--wm-green)', data: disk.slice(-30) }]} height={90} yTicks={2} area format={(v) => `${Math.round(v)}k`} /></div>
+        <div className="wm-aside-section"><b>Network I/O</b><LineChart series={[{ key: 'n', name: 'Network', color: 'var(--wm-blue)', data: net.slice(-30) }]} height={90} yTicks={2} area format={(v) => `${(v / 50).toFixed(1)}M`} /></div>
       </aside>
 
       {confirm && (

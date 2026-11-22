@@ -78,7 +78,7 @@ export function Pill({ tone, children, dot }: { tone: Tone; children: React.Reac
 }
 
 export const statusTone = (code: number): Tone => (code >= 500 ? 'red' : code >= 400 ? 'amber' : 'green');
-export const methodTone = (m: string): Tone => (m === 'GET' ? 'blue' : m === 'POST' ? 'purple' : m === 'DELETE' ? 'red' : 'amber');
+export const methodTone = (m: string): Tone => (m === 'GET' ? 'blue' : m === 'POST' ? 'green' : m === 'DELETE' ? 'red' : 'amber');
 
 /* ---------- Number stepper ---------- */
 export function Stepper({ value, onChange, min = 0, max = 9999, step = 1, suffix = '', label }: {

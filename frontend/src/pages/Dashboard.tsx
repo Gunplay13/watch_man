@@ -27,8 +27,8 @@ export default function Dashboard(): React.JSX.Element {
   const all: Series[] = [
     { key: 'cpu', name: 'CPU', color: 'var(--wm-accent)', data: cpu },
     { key: 'mem', name: 'Memory', color: 'var(--wm-amber)', data: mem },
-    { key: 'api', name: 'API latency', color: '#60a5fa', data: api },
-    { key: 'resp', name: 'Endpoint response times', color: '#9ca3af', data: resp },
+    { key: 'api', name: 'API latency', color: 'var(--wm-blue)', data: api },
+    { key: 'resp', name: 'Endpoint response times', color: 'var(--wm-muted)', data: resp },
   ];
   const visible = all.filter((s) => !hidden.has(s.key)).map((s) => ({ ...s, data: s.data.slice(-range) }));
   const xLabels = [`${range}m`, `${Math.round(range * 0.75)}m`, `${Math.round(range * 0.5)}m`, `${Math.round(range * 0.25)}m`, 'now'];
@@ -82,14 +82,14 @@ export default function Dashboard(): React.JSX.Element {
             <div className="wm-donut-wrap">
               <Donut
                 slices={[
-                  { label: 'Healthy', value: counts.healthy, color: '#6ee7b7' },
+                  { label: 'Healthy', value: counts.healthy, color: 'var(--wm-green)' },
                   { label: 'Warning', value: counts.warning, color: 'var(--wm-amber)' },
                   { label: 'Critical', value: counts.critical, color: 'var(--wm-red)' },
                 ]}
                 center={<div style={{ textAlign: 'center' }}><div className="wm-donut-center">{total}</div><div className="wm-note">watches</div></div>}
               />
               <div className="wm-row" style={{ justifyContent: 'center', gap: 14 }}>
-                <span className="wm-dotlabel"><span className="wm-dot" style={{ background: '#6ee7b7' }} />Healthy {counts.healthy}</span>
+                <span className="wm-dotlabel"><span className="wm-dot" style={{ background: 'var(--wm-green)' }} />Healthy {counts.healthy}</span>
                 <span className="wm-dotlabel"><span className="wm-dot" style={{ background: 'var(--wm-amber)' }} />Warning {counts.warning}</span>
                 <span className="wm-dotlabel"><span className="wm-dot" style={{ background: 'var(--wm-red)' }} />Critical {counts.critical}</span>
               </div>
@@ -180,7 +180,7 @@ export default function Dashboard(): React.JSX.Element {
         </div>
         {inc && (
           <>
-            <LineChart series={[{ key: 'i', name: inc.title, color: '#6ee7b7', data: inc.spark }]} height={110} yTicks={2} area />
+            <LineChart series={[{ key: 'i', name: inc.title, color: 'var(--wm-green)', data: inc.spark }]} height={110} yTicks={2} area />
             <div className="wm-aside-section">
               <div><span className="wm-muted">Triggered by:</span> <b>{inc.trigger}</b></div>
               <div><span className="wm-muted">Service:</span> {inc.service}</div>

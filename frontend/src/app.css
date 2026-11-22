@@ -141,7 +141,7 @@
 .wm-lvl-INFO { color: var(--wm-green); }
 .wm-lvl-WARN { color: var(--wm-amber); }
 .wm-lvl-ERROR { color: var(--wm-red); }
-.wm-lvl-CRITICAL { color: var(--wm-purple); }
+.wm-lvl-CRITICAL { color: var(--wm-red); font-weight: 700; }
 .wm-miniscroll { max-height: 170px; overflow: auto; }
 .wm-logline { display: flex; gap: 8px; }
 .wm-loglist { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; max-height: 420px; overflow: auto; }

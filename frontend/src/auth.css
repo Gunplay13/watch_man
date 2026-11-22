@@ -5,7 +5,7 @@
 .wm-auth-hero {
   padding: 48px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px;
   border-right: 1px solid var(--wm-border);
-  background: radial-gradient(640px 320px at 15% 0%, rgba(45, 212, 191, .16), transparent 70%), var(--wm-surface);
+  background: var(--wm-surface);
 }
 .wm-auth-hero h1 { margin: 0 0 12px; font-size: 38px; line-height: 1.15; font-weight: 700; letter-spacing: -.01em; }
 .wm-auth-hero h1 span { color: var(--wm-accent); }
@@ -44,7 +44,7 @@
 .wm-alert--info b { color: var(--wm-text); font-weight: 600; }
 
 .wm-strength { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-top: 2px; }
-.wm-strength i { height: 4px; border-radius: 99px; background: var(--wm-border); display: block; }
+.wm-strength i { height: 4px; border-radius: 2px; background: var(--wm-border); display: block; }
 .wm-strength[data-level="1"] i:nth-child(-n+1) { background: var(--wm-red); }
 .wm-strength[data-level="2"] i:nth-child(-n+2) { background: var(--wm-amber); }
 .wm-strength[data-level="3"] i:nth-child(-n+3) { background: #84cc16; }
