@@ -1,38 +1,26 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Monitor } from 'lucide-react';
 import { Icon } from './Icon';
 import '../auth.css';
-
-const POINTS = [
-  'Endpoint and API uptime checks, every 30 seconds',
-  'SSL / TLS expiry tracking before certificates lapse',
-  'Container and infrastructure health in one view',
-  'Alerts straight to WhatsApp and Telegram',
-];
 
 export function AuthShell({ children }: { children: React.ReactNode }): React.JSX.Element {
   return (
     <div className="wm-auth">
-      <aside className="wm-auth-hero" aria-hidden="true">
-        <div className="wm-brand"><span className="wm-brand-mark">W</span>WATCHMAN <span className="wm-brand-sep">//</span> <span className="wm-brand-title">Monitoring</span></div>
-        <div>
-          <h1>Know before your <span>users</span> do.</h1>
-          <p>One dashboard for endpoints, certificates, infrastructure and logs — with alerts that reach your team where they already are.</p>
-          <ul className="wm-auth-points">
-            {POINTS.map((p) => <li key={p}><Icon name="check" size={16} />{p}</li>)}
-          </ul>
-        </div>
-        <div className="wm-auth-peek">
-          <div className="wm-auth-peek-row"><span><span className="wm-dot" style={{ background: 'var(--wm-green)' }} />api-node</span><span className="wm-muted">200 OK · 45ms</span></div>
-          <div className="wm-auth-peek-row"><span><span className="wm-dot" style={{ background: 'var(--wm-amber)' }} />example.com certificate</span><span className="wm-muted">12 days left</span></div>
-          <div className="wm-auth-peek-row"><span><span className="wm-dot" style={{ background: 'var(--wm-red)' }} />Core Banking Webhook</span><span className="wm-muted">503 · alert sent</span></div>
-        </div>
-      </aside>
-      <main className="wm-auth-main">
+      <div className="wm-auth-main">
+        <Link to="/" className="wm-auth-brand group">
+          <div className="w-8 h-8 rounded-md bg-wm-accent text-wm-accent-contrast font-bold flex items-center justify-center text-xs">
+            <Monitor size={16} strokeWidth={2.5} />
+          </div>
+          <div className="flex items-center gap-1.5 text-sm text-wm-text font-semibold tracking-tight">
+            <span>WATCHMAN</span>
+            <span className="font-normal text-wm-muted text-xs">MONITORS</span>
+          </div>
+        </Link>
         <div className="wm-auth-card">
-          <div className="wm-brand wm-auth-mobile-brand"><span className="wm-brand-mark">W</span>WATCHMAN</div>
           {children}
         </div>
-      </main>
+      </div>
     </div>
   );
 }
