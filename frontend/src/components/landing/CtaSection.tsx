@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export default function CtaSection(): React.JSX.Element {
   return (
@@ -14,19 +14,12 @@ export default function CtaSection(): React.JSX.Element {
             Connect Telegram, Slack, WhatsApp, Email, or Discord in under 60 seconds. Free during developer preview.
           </p>
 
-          <div className="flex items-center justify-center gap-3.5 flex-wrap mb-7">
+          <div className="flex items-center justify-center mb-7">
             <Link
               to="/register"
-              className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-2"
+              className="px-6 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all"
             >
-              <span>Get Started</span>
-              <ArrowRight size={14} />
-            </Link>
-            <Link
-              to="/login"
-              className="px-5 py-2.5 rounded-md border border-wm-border bg-wm-surface text-wm-text font-normal text-xs hover:bg-wm-surface-2 active:translate-y-[1px] transition-all"
-            >
-              Sign In
+              Get Started
             </Link>
           </div>
 

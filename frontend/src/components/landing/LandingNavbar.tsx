@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Moon, Monitor, ArrowRight } from 'lucide-react';
+import { Sun, Moon, Monitor } from 'lucide-react';
 import { useAuth } from '../../state/Auth';
 
 export default function LandingNavbar(): React.JSX.Element {
@@ -54,10 +54,9 @@ export default function LandingNavbar(): React.JSX.Element {
             {user ? (
               <Link
                 to="/dashboard"
-                className="text-xs font-medium px-3.5 py-1.5 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-1.5"
+                className="text-xs font-medium px-3.5 py-1.5 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 active:translate-y-[1px] transition-all"
               >
-                <span>Get Started</span>
-                <ArrowRight size={13} />
+                Get Started
               </Link>
             ) : (
               <>
@@ -69,10 +68,9 @@ export default function LandingNavbar(): React.JSX.Element {
                 </Link>
                 <Link
                   to="/register"
-                  className="text-xs font-medium px-3.5 py-1.5 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-1.5"
+                  className="text-xs font-medium px-3.5 py-1.5 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 active:translate-y-[1px] transition-all"
                 >
-                  <span>Get Started</span>
-                  <ArrowRight size={13} />
+                  Get Started
                 </Link>
               </>
             )}

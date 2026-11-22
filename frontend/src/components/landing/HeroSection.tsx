@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Copy, Check, ArrowRight, Terminal } from 'lucide-react';
+import { Copy, Check, Terminal } from 'lucide-react';
 
 export default function HeroSection(): React.JSX.Element {
   const [copied, setCopied] = useState(false);
@@ -30,10 +30,9 @@ export default function HeroSection(): React.JSX.Element {
           <div className="flex items-center justify-center gap-3.5 mb-7 flex-wrap">
             <Link
               to="/register"
-              className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-2"
+              className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all"
             >
-              <span>Get Started</span>
-              <ArrowRight size={14} />
+              Get Started
             </Link>
             <Link
               to="/login"
@@ -63,20 +62,26 @@ export default function HeroSection(): React.JSX.Element {
           </div>
 
           {/* Clean Product Preview Visual (Image-First) */}
-          <div className="w-full max-w-4xl rounded-lg border border-wm-border bg-wm-surface overflow-hidden">
+          <div className="w-full max-w-5xl rounded-lg border border-wm-border bg-wm-surface overflow-hidden">
             <div className="flex items-center justify-between px-4 py-2.5 bg-wm-surface-2 border-b border-wm-border text-xs font-mono text-wm-muted">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-sm bg-wm-border" />
                 <span className="w-2.5 h-2.5 rounded-sm bg-wm-border" />
                 <span className="w-2.5 h-2.5 rounded-sm bg-wm-border" />
-                <span className="ml-2 text-wm-text font-medium text-[11px]">watchman-terminal</span>
+                <span className="ml-2 text-wm-text font-medium text-[11px]">app.watchman.dev</span>
               </div>
-              <span className="text-[11px] text-wm-muted font-normal">v2.4.0 • production</span>
+              <span className="text-[11px] text-wm-muted font-normal">Endpoints &amp; APIs</span>
             </div>
             <img
-              src="/hero-preview.png"
-              alt="Watchman synthetic monitor preview"
-              className="w-full h-auto block"
+              src="/hero-preview-dark.png"
+              alt="Watchman synthetic endpoint monitoring dashboard - dark mode"
+              className="w-full h-auto wm-screenshot-dark"
+              loading="eager"
+            />
+            <img
+              src="/hero-preview-light.png"
+              alt="Watchman synthetic endpoint monitoring dashboard - light mode"
+              className="w-full h-auto wm-screenshot-light"
               loading="eager"
             />
           </div>
