@@ -16,7 +16,6 @@
     "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
-    "@tailwindcss/oxide-linux-x64-gnu": "^4.3.5",
     "@tailwindcss/vite": "^4.3.5",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
