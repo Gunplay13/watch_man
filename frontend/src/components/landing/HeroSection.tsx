@@ -24,14 +24,14 @@ export default function HeroSection(): React.JSX.Element {
               to="/register"
               className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-2"
             >
-              <span>Start Monitoring Free</span>
+              <span>Get Started</span>
               <ArrowRight size={14} />
             </Link>
             <Link
               to="/login"
               className="px-5 py-2.5 rounded-md border border-wm-border bg-wm-surface text-wm-text font-normal text-xs hover:bg-wm-surface-2 active:translate-y-[1px] transition-all"
             >
-              Console Login
+              Sign In
             </Link>
           </div>
 

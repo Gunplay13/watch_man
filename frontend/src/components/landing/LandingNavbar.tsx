@@ -56,7 +56,7 @@ export default function LandingNavbar(): React.JSX.Element {
                 to="/dashboard"
                 className="text-xs font-medium px-3.5 py-1.5 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-1.5"
               >
-                <span>Console</span>
+                <span>Get Started</span>
                 <ArrowRight size={13} />
               </Link>
             ) : (

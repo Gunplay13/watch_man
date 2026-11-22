@@ -30,7 +30,7 @@ export default function LandingFooter(): React.JSX.Element {
               <div className="font-medium uppercase tracking-wider text-wm-text text-[11px]">Product</div>
               <div><a href="#features" className="hover:text-wm-text transition-colors">Edge Probes</a></div>
               <div><a href="#features" className="hover:text-wm-text transition-colors">SSL Guardian</a></div>
-              <div><Link to="/register" className="hover:text-wm-text transition-colors">Sign Up</Link></div>
+              <div><Link to="/register" className="hover:text-wm-text transition-colors">Get Started</Link></div>
             </div>
 
             {/* Links Col 2 */}
@@ -44,7 +44,7 @@ export default function LandingFooter(): React.JSX.Element {
             {/* Links Col 3 */}
             <div className="space-y-2">
               <div className="font-medium uppercase tracking-wider text-wm-text text-[11px]">Security &amp; Legal</div>
-              <div><Link to="/login" className="hover:text-wm-text transition-colors">Console Login</Link></div>
+              <div><Link to="/login" className="hover:text-wm-text transition-colors">Sign In</Link></div>
               <div className="text-wm-muted">Privacy Policy</div>
               <div className="text-wm-muted">Terms of Service</div>
             </div>
