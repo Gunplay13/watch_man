@@ -11,9 +11,9 @@ export default function TerminalMockup(): React.JSX.Element {
       {/* Mac Window Header */}
       <div className="flex items-center justify-between px-3.5 py-2.5 bg-wm-surface-2 border-b border-wm-terminal-border">
         <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-wm-red inline-block" />
-          <span className="w-2.5 h-2.5 rounded-full bg-wm-amber inline-block" />
-          <span className="w-2.5 h-2.5 rounded-full bg-wm-green inline-block" />
+          <span className="w-2 h-2 rounded-sm bg-wm-red inline-block" />
+          <span className="w-2 h-2 rounded-sm bg-wm-amber inline-block" />
+          <span className="w-2 h-2 rounded-sm bg-wm-green inline-block" />
         </div>
         <div className="flex items-center gap-1.5 text-[11px] text-wm-muted font-mono">
           <Terminal size={12} />
