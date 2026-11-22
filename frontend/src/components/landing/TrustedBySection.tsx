@@ -1,33 +1,31 @@
 import React from 'react';
 
 const PARTNERS = [
-  { name: 'PAYPAL', desc: 'Global Payments' },
-  { name: 'SIEMENS', desc: 'Industrial IoT' },
-  { name: 'ZEISS', desc: 'Precision Optics' },
-  { name: 'MEDIBANK', desc: 'Healthcare Services' },
-  { name: 'MONERIS', desc: 'Transaction Processing' },
-  { name: 'PAYSTACK', desc: 'Fintech Infrastructure' },
-  { name: 'FLUTTERWAVE', desc: 'Pan-African Gateway' },
+  'PAYPAL',
+  'SIEMENS',
+  'ZEISS',
+  'MEDIBANK',
+  'MONERIS',
+  'PAYSTACK',
+  'FLUTTERWAVE',
 ];
 
 export default function TrustedBySection(): React.JSX.Element {
   return (
-    <section className="w-full border-y border-wm-border bg-wm-surface py-6 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="text-xs font-bold uppercase tracking-wider text-wm-muted whitespace-nowrap">
+    <section className="w-full border-b border-wm-border bg-wm-surface py-5 px-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
+        <div className="text-[11px] font-bold uppercase tracking-wider text-wm-muted whitespace-nowrap">
           Trusted by teams at
         </div>
 
-        <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap">
-          {PARTNERS.map((p) => (
-            <div
-              key={p.name}
-              className="flex items-center gap-1.5 text-xs md:text-sm font-extrabold tracking-widest text-wm-muted hover:text-wm-text transition-colors cursor-default"
-              title={`${p.name} — ${p.desc}`}
+        <div className="flex items-center justify-center gap-7 md:gap-10 flex-wrap">
+          {PARTNERS.map((name) => (
+            <span
+              key={name}
+              className="text-xs font-bold tracking-widest text-wm-muted hover:text-wm-text transition-colors cursor-default"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-wm-accent" />
-              <span>{p.name}</span>
-            </div>
+              {name}
+            </span>
           ))}
         </div>
       </div>

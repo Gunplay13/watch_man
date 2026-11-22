@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Sun, Moon, Monitor } from 'lucide-react';
 import { useAuth } from '../../state/Auth';
 
 export default function LandingNavbar(): React.JSX.Element {
@@ -22,61 +23,63 @@ export default function LandingNavbar(): React.JSX.Element {
   };
 
   return (
-    <nav className="sticky top-0 z-40 flex items-center justify-between px-6 py-4 border-b border-wm-border bg-wm-bg/95 backdrop-blur-md">
-      <div className="flex items-center gap-8">
-        <Link to="/" className="flex items-center gap-2.5 text-decoration-none">
-          <div className="w-8 h-8 rounded-lg bg-wm-accent text-wm-accent-contrast font-black flex items-center justify-center text-sm shadow-sm">
-            W
-          </div>
-          <div className="flex items-center gap-1.5 font-bold tracking-tight text-base text-wm-text">
-            <span>WATCHMAN</span>
-            <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-wm-surface-2 text-wm-accent border border-wm-border">
-              Monitors
-            </span>
-          </div>
-        </Link>
+    <header className="sticky top-0 z-40 border-b border-wm-border bg-wm-bg/95 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3.5">
+        <div className="flex items-center gap-8">
+          <Link to="/" className="flex items-center gap-2.5 text-decoration-none">
+            <div className="w-7 h-7 rounded-md bg-wm-accent text-wm-accent-contrast font-bold flex items-center justify-center text-xs shadow-sm">
+              <Monitor size={15} strokeWidth={2.5} />
+            </div>
+            <div className="flex items-center gap-2 font-bold tracking-tight text-sm text-wm-text">
+              <span>WATCHMAN</span>
+              <span className="text-[10px] uppercase font-semibold tracking-wider px-1.5 py-0.5 rounded-md bg-wm-surface-2 text-wm-muted border border-wm-border">
+                Monitors
+              </span>
+            </div>
+          </Link>
 
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-wm-muted">
-          <a href="#features" className="hover:text-wm-text transition-colors">Product</a>
-          <a href="#synthetic" className="hover:text-wm-text transition-colors">Synthetic Checks</a>
-          <a href="#simulator" className="hover:text-wm-text transition-colors">Live Sandbox</a>
-          <a href="#integrations" className="hover:text-wm-text transition-colors">Integrations</a>
+          <nav className="hidden md:flex items-center gap-6 text-xs font-semibold text-wm-muted tracking-wide">
+            <a href="#features" className="hover:text-wm-text transition-colors">Features</a>
+            <a href="#synthetic" className="hover:text-wm-text transition-colors">Synthetic Checks</a>
+            <a href="#simulator" className="hover:text-wm-text transition-colors">Live Sandbox</a>
+            <a href="#integrations" className="hover:text-wm-text transition-colors">Integrations</a>
+          </nav>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-md border border-wm-border bg-wm-surface text-wm-text hover:bg-wm-surface-2 transition-colors flex items-center justify-center"
+          >
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
+
+          {user ? (
+            <Link
+              to="/dashboard"
+              className="text-xs font-semibold px-3.5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 transition-opacity"
+            >
+              Console
+            </Link>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="text-xs font-semibold text-wm-muted hover:text-wm-text px-2.5 py-2 transition-colors"
+              >
+                Sign In
+              </Link>
+              <Link
+                to="/register"
+                className="text-xs font-semibold px-3.5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 transition-opacity"
+              >
+                Get Started
+              </Link>
+            </>
+          )}
         </div>
       </div>
-
-      <div className="flex items-center gap-3">
-        <button
-          onClick={toggleTheme}
-          aria-label="Toggle color theme"
-          className="p-2 rounded-lg border border-wm-border bg-wm-surface text-wm-text hover:bg-wm-surface-2 transition-colors text-xs font-semibold flex items-center gap-1.5"
-        >
-          {theme === 'dark' ? '☀ Light' : '☾ Dark'}
-        </button>
-
-        {user ? (
-          <Link
-            to="/dashboard"
-            className="text-sm font-semibold px-4 py-2 rounded-lg bg-wm-accent text-wm-accent-contrast hover:opacity-90 transition-opacity"
-          >
-            Go to Console
-          </Link>
-        ) : (
-          <>
-            <Link
-              to="/login"
-              className="text-sm font-medium text-wm-muted hover:text-wm-text px-3 py-1.5 transition-colors"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/register"
-              className="text-sm font-semibold px-4 py-2 rounded-lg bg-wm-accent text-wm-accent-contrast hover:opacity-90 transition-opacity"
-            >
-              Sign Up Free
-            </Link>
-          </>
-        )}
-      </div>
-    </nav>
+    </header>
   );
 }
