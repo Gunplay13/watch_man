@@ -6,21 +6,25 @@ const FEATURES = [
     icon: Activity,
     title: 'Synthetic Endpoint Health Checks',
     desc: 'Simulate user traffic and execute scheduled HTTP assertions from edge nodes. Detect regressions, latency spikes, and silent 500 errors before users report them.',
+    metric: 'p95 Latency < 45ms',
   },
   {
     icon: ShieldCheck,
     title: 'Automated SSL & TLS Guardian',
     desc: 'Never let an expired SSL certificate take your checkout or login offline. Automated certificate chain analysis alerts your team at 30, 14, and 3-day thresholds.',
+    metric: 'TLS 1.3 SNI Inspection',
   },
   {
     icon: MessageSquare,
     title: 'Instant WhatsApp & Telegram Alerts',
     desc: 'Skip noisy email inboxes. Deliver actionable incident notifications with HTTP status codes, latency timings, and curl repro steps straight to your on-call chat groups.',
+    metric: 'Dispatch Latency < 380ms',
   },
   {
     icon: Server,
     title: 'Agentless Container Telemetry',
     desc: 'Monitor Docker container health, unexpected restarts, and memory ceilings without installing bloated agent daemons on your production servers.',
+    metric: 'Zero Host Overhead',
   },
 ];
 
@@ -46,8 +50,13 @@ export default function FeaturesSection(): React.JSX.Element {
                 className="rounded-lg border border-wm-border bg-wm-surface p-6 hover:border-wm-accent/60 transition-colors flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-8 h-8 rounded-md bg-wm-surface-2 border border-wm-border flex items-center justify-center text-wm-text mb-4">
-                    <IconComponent size={16} />
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-8 h-8 rounded-md bg-wm-surface-2 border border-wm-border flex items-center justify-center text-wm-text">
+                      <IconComponent size={16} />
+                    </div>
+                    <span className="font-mono text-[10px] text-wm-muted">
+                      {f.metric}
+                    </span>
                   </div>
                   <h3 className="text-base font-bold text-wm-text mb-2">{f.title}</h3>
                   <p className="text-xs sm:text-sm text-wm-muted leading-relaxed">{f.desc}</p>

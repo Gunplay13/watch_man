@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Check, Activity, ShieldCheck, MessageSquare, Terminal } from 'lucide-react';
+import { Check, Activity, ShieldCheck, MessageSquare, Terminal, RefreshCw } from 'lucide-react';
 
 type Tab = 'agent' | 'synthetic' | 'ssl' | 'whatsapp';
 
 export default function TerminalMockup(): React.JSX.Element {
   const [tab, setTab] = useState<Tab>('agent');
+  const [tick, setTick] = useState(0);
+
+  const retest = () => setTick((t) => t + 1);
 
   return (
     <div className="rounded-lg border border-wm-terminal-border bg-wm-terminal-bg overflow-hidden font-mono text-xs">
@@ -19,51 +22,35 @@ export default function TerminalMockup(): React.JSX.Element {
           <Terminal size={12} />
           <span>Claude Code — ~/checkout-service</span>
         </div>
-        <div className="w-8" />
+        <button
+          onClick={retest}
+          title="Re-run terminal trace"
+          aria-label="Refresh trace"
+          className="text-wm-muted hover:text-wm-text p-1 transition-colors"
+        >
+          <RefreshCw size={11} className={tick ? 'transition-transform duration-300 rotate-180' : ''} />
+        </button>
       </div>
 
       {/* Tabs */}
       <div className="flex bg-wm-surface border-b border-wm-terminal-border text-[11px]">
-        <button
-          onClick={() => setTab('agent')}
-          className={`px-3 py-2 border-b-2 font-mono transition-colors ${
-            tab === 'agent'
-              ? 'border-wm-accent text-wm-accent bg-wm-terminal-bg'
-              : 'border-transparent text-wm-muted hover:text-wm-text'
-          }`}
-        >
-          Agent Session
-        </button>
-        <button
-          onClick={() => setTab('synthetic')}
-          className={`px-3 py-2 border-b-2 font-mono transition-colors ${
-            tab === 'synthetic'
-              ? 'border-wm-accent text-wm-accent bg-wm-terminal-bg'
-              : 'border-transparent text-wm-muted hover:text-wm-text'
-          }`}
-        >
-          Synthetic Ping
-        </button>
-        <button
-          onClick={() => setTab('ssl')}
-          className={`px-3 py-2 border-b-2 font-mono transition-colors ${
-            tab === 'ssl'
-              ? 'border-wm-accent text-wm-accent bg-wm-terminal-bg'
-              : 'border-transparent text-wm-muted hover:text-wm-text'
-          }`}
-        >
-          SSL Guardian
-        </button>
-        <button
-          onClick={() => setTab('whatsapp')}
-          className={`px-3 py-2 border-b-2 font-mono transition-colors ${
-            tab === 'whatsapp'
-              ? 'border-wm-accent text-wm-accent bg-wm-terminal-bg'
-              : 'border-transparent text-wm-muted hover:text-wm-text'
-          }`}
-        >
-          WhatsApp Hook
-        </button>
+        {(['agent', 'synthetic', 'ssl', 'whatsapp'] as Tab[]).map((t) => {
+          const label = t === 'agent' ? 'Agent Session' : t === 'synthetic' ? 'Synthetic Ping' : t === 'ssl' ? 'SSL Guardian' : 'WhatsApp Hook';
+          const active = tab === t;
+          return (
+            <button
+              key={t}
+              onClick={() => setTab(t)}
+              className={`px-3 py-2 border-b-2 font-mono transition-colors ${
+                active
+                  ? 'border-wm-accent text-wm-accent bg-wm-terminal-bg'
+                  : 'border-transparent text-wm-muted hover:text-wm-text'
+              }`}
+            >
+              {label}
+            </button>
+          );
+        })}
       </div>
 
       {/* Terminal Output */}
@@ -78,11 +65,11 @@ export default function TerminalMockup(): React.JSX.Element {
             </div>
             <div className="flex items-center gap-2">
               <Check size={13} className="text-wm-green flex-shrink-0" />
-              <span>Lagos Edge Node: <b className="text-wm-green">200 OK</b> (38ms latency)</span>
+              <span>Lagos Edge Node: <b className="text-wm-green">200 OK</b> ({36 + (tick % 7)}ms latency)</span>
             </div>
             <div className="flex items-center gap-2">
               <Check size={13} className="text-wm-green flex-shrink-0" />
-              <span>Accra Gateway: <b className="text-wm-green">200 OK</b> (44ms latency)</span>
+              <span>Accra Gateway: <b className="text-wm-green">200 OK</b> ({42 + (tick % 5)}ms latency)</span>
             </div>
             <div className="flex items-center gap-2">
               <Check size={13} className="text-wm-green flex-shrink-0" />
@@ -102,11 +89,11 @@ export default function TerminalMockup(): React.JSX.Element {
             <div className="text-wm-muted">Running 4 assertions on target endpoints...</div>
             <div className="flex items-center gap-2">
               <Check size={13} className="text-wm-green flex-shrink-0" />
-              <span>POST /v1/auth/token → <b className="text-wm-green">201 Created</b> (42ms)</span>
+              <span>POST /v1/auth/token → <b className="text-wm-green">201 Created</b> ({40 + (tick % 4)}ms)</span>
             </div>
             <div className="flex items-center gap-2">
               <Check size={13} className="text-wm-green flex-shrink-0" />
-              <span>GET /v1/wallets/balance → <b className="text-wm-green">200 OK</b> (51ms)</span>
+              <span>GET /v1/wallets/balance → <b className="text-wm-green">200 OK</b> ({49 + (tick % 6)}ms)</span>
             </div>
             <div className="flex items-center gap-2">
               <Check size={13} className="text-wm-green flex-shrink-0" />
@@ -160,7 +147,7 @@ export default function TerminalMockup(): React.JSX.Element {
             </div>
             <div className="text-wm-green mt-1 flex items-center gap-1.5">
               <Check size={13} />
-              <span>Dispatched to on-call group in 340ms</span>
+              <span>Dispatched to on-call group in {320 + (tick % 20)}ms</span>
             </div>
           </>
         )}

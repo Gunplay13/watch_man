@@ -56,7 +56,7 @@ export default function LandingNavbar(): React.JSX.Element {
           {user ? (
             <Link
               to="/dashboard"
-              className="text-xs font-semibold px-3.5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 transition-opacity"
+              className="text-xs font-semibold px-3.5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 active:translate-y-[1px] transition-all"
             >
               Console
             </Link>
@@ -70,7 +70,7 @@ export default function LandingNavbar(): React.JSX.Element {
               </Link>
               <Link
                 to="/register"
-                className="text-xs font-semibold px-3.5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 transition-opacity"
+                className="text-xs font-semibold px-3.5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast hover:opacity-90 active:translate-y-[1px] transition-all"
               >
                 Get Started
               </Link>

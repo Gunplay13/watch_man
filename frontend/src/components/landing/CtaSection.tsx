@@ -16,14 +16,14 @@ export default function CtaSection(): React.JSX.Element {
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
           <Link
             to="/register"
-            className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-semibold text-xs hover:opacity-90 transition-opacity flex items-center gap-1.5"
+            className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-semibold text-xs hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-1.5"
           >
             <span>Start Monitoring Free</span>
             <ArrowRight size={14} />
           </Link>
           <Link
             to="/login"
-            className="px-5 py-2.5 rounded-md border border-wm-border bg-wm-surface-2 text-wm-text font-medium text-xs hover:bg-wm-surface transition-colors"
+            className="px-5 py-2.5 rounded-md border border-wm-border bg-wm-surface-2 text-wm-text font-medium text-xs hover:bg-wm-surface active:translate-y-[1px] transition-all"
           >
             Sign In to Console
           </Link>

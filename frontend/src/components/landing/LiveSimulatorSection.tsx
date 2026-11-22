@@ -65,7 +65,7 @@ export default function LiveSimulatorSection(): React.JSX.Element {
             <button
               onClick={runCheck}
               disabled={running}
-              className="px-5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast font-semibold text-xs hover:opacity-90 transition-opacity disabled:opacity-50 whitespace-nowrap flex items-center justify-center gap-1.5"
+              className="px-5 py-2 rounded-md bg-wm-accent text-wm-accent-contrast font-semibold text-xs hover:opacity-90 active:translate-y-[1px] transition-all disabled:opacity-50 whitespace-nowrap flex items-center justify-center gap-1.5"
             >
               <Play size={12} fill="currentColor" />
               <span>{running ? 'Running Ping…' : 'Execute Check'}</span>
