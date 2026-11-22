@@ -79,6 +79,11 @@
   --wm-terminal-border: #374151;
   --wm-terminal-text: #f9fafb;
 }
+
+.wm-screenshot-dark { display: block; }
+.wm-screenshot-light { display: none; }
+[data-theme="light"] .wm-screenshot-dark { display: none; }
+[data-theme="light"] .wm-screenshot-light { display: block; }
 * { box-sizing: border-box; }
 body {
   margin: 0;
