@@ -15,19 +15,19 @@ export default function HeroSection(): React.JSX.Element {
   return (
     <section className="w-full border-b border-dashed border-wm-border relative">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="border-x border-dashed border-wm-border pt-20 pb-20 md:pt-28 md:pb-24 px-4 md:px-12 flex flex-col items-center text-center">
+        <div className="border-x border-dashed border-wm-border pt-12 pb-14 md:pt-16 md:pb-16 px-4 md:px-12 flex flex-col items-center text-center">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold tracking-tight text-wm-text leading-[1.12] max-w-3xl mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-wm-text leading-[1.12] max-w-3xl mb-4">
             Know the moment your endpoints are slow or dead
           </h1>
 
           {/* Clean Subtext */}
-          <p className="text-sm sm:text-base text-wm-muted max-w-xl leading-relaxed mb-8 font-normal">
+          <p className="text-sm sm:text-base text-wm-muted max-w-xl leading-relaxed mb-6 font-normal">
             Continuously monitor your APIs for uptime and response latency. Receive instant alerts on Telegram, Slack, WhatsApp, Email, or Discord when an endpoint fails or degrades.
           </p>
 
           {/* Action CTAs */}
-          <div className="flex items-center justify-center gap-3.5 mb-10 flex-wrap">
+          <div className="flex items-center justify-center gap-3.5 mb-7 flex-wrap">
             <Link
               to="/register"
               className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-2"
@@ -44,7 +44,7 @@ export default function HeroSection(): React.JSX.Element {
           </div>
 
           {/* Minimal CLI Bar */}
-          <div id="install" className="flex items-center rounded-md border border-wm-border bg-wm-surface overflow-hidden max-w-md w-full mb-14 md:mb-16">
+          <div id="install" className="flex items-center rounded-md border border-wm-border bg-wm-surface overflow-hidden max-w-md w-full mb-8 md:mb-10">
             <div className="bg-wm-surface-2 border-r border-wm-border px-3 py-2 text-wm-muted flex items-center gap-1.5 text-xs">
               <Terminal size={13} className="text-wm-accent" />
               <span className="font-mono text-[11px] font-medium">CLI</span>

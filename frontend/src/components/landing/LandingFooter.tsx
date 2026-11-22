@@ -6,10 +6,10 @@ export default function LandingFooter(): React.JSX.Element {
   return (
     <footer className="w-full bg-wm-bg text-xs text-wm-muted font-normal">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="border-x border-dashed border-wm-border py-16 px-4 md:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        <div className="border-x border-dashed border-wm-border py-10 md:py-12 px-4 md:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-8">
             {/* Brand Column */}
-            <div className="md:col-span-2 space-y-3">
+            <div className="md:col-span-2 space-y-2.5">
               <div className="flex items-center gap-2">
                 <div className="w-6 h-6 rounded-md bg-wm-accent text-wm-accent-contrast font-bold flex items-center justify-center text-xs">
                   <Monitor size={14} />

@@ -6,15 +6,15 @@ export default function CtaSection(): React.JSX.Element {
   return (
     <section className="w-full border-b border-dashed border-wm-border bg-wm-surface/10">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="border-x border-dashed border-wm-border py-24 md:py-32 px-4 md:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-wm-text mb-3">
+        <div className="border-x border-dashed border-wm-border py-14 md:py-16 px-4 md:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-wm-text mb-2.5">
             Never miss an endpoint outage or slowdown
           </h2>
-          <p className="text-sm font-normal text-wm-muted max-w-md mx-auto leading-relaxed mb-8">
+          <p className="text-sm font-normal text-wm-muted max-w-md mx-auto leading-relaxed mb-6">
             Connect Telegram, Slack, WhatsApp, Email, or Discord in under 60 seconds. Free during developer preview.
           </p>
 
-          <div className="flex items-center justify-center gap-3.5 flex-wrap mb-10">
+          <div className="flex items-center justify-center gap-3.5 flex-wrap mb-7">
             <Link
               to="/register"
               className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all flex items-center gap-2"
