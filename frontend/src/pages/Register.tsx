@@ -29,7 +29,7 @@ export default function Register(): React.JSX.Element {
   const [formError, setFormError] = useState('');
   const [busy, setBusy] = useState(false);
 
-  if (user) return <Navigate to="/" replace />;
+  if (user) return <Navigate to="/dashboard" replace />;
 
   const clear = (k: keyof Errors) => setErrors((x) => ({ ...x, [k]: undefined }));
   const level = strength(password);

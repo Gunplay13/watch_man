@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-d
 import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './state/Auth';
+import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
@@ -18,14 +19,18 @@ export default function App(): React.JSX.Element {
     <Router>
       <AuthProvider>
         <Routes>
-          {/* Public Routes */}
+          {/* Public Marketing & Landing Routes */}
+          <Route path="/" element={<Landing />} />
+          <Route path="/landing" element={<Landing />} />
+
+          {/* Public Auth Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
           {/* Protected Dashboard Layout Routes */}
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/endpoints" element={<Endpoints />} />
               <Route path="/watchers" element={<Endpoints />} />
               <Route path="/ssl" element={<SSL />} />
@@ -33,7 +38,7 @@ export default function App(): React.JSX.Element {
               <Route path="/logs" element={<Logs />} />
               <Route path="/integrations" element={<Integrations />} />
               <Route path="/settings" element={<Settings />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<Navigate to="/dashboard" replace />} />
             </Route>
           </Route>
         </Routes>

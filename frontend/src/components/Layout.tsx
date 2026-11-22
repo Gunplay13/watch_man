@@ -6,7 +6,7 @@ import { useAuth } from '../state/Auth';
 import { containerHealth, endpointHealth } from '../lib/utils';
 
 const NAV: { to: string; label: string; icon: IconName; end?: boolean }[] = [
-  { to: '/', label: 'Dashboard', icon: 'dashboard', end: true },
+  { to: '/dashboard', label: 'Dashboard', icon: 'dashboard', end: true },
   { to: '/endpoints', label: 'Endpoints & APIs', icon: 'file' },
   { to: '/ssl', label: 'SSL / TLS Tracker', icon: 'shield' },
   { to: '/infrastructure', label: 'Infrastructure', icon: 'nodes' },
@@ -18,7 +18,7 @@ const NAV: { to: string; label: string; icon: IconName; end?: boolean }[] = [
 function titleFor(pathname: string): string {
   if (pathname.startsWith('/watchers')) return 'Endpoints & APIs';
   const hit = NAV.find((n) => (n.end ? pathname === n.to : pathname.startsWith(n.to)));
-  return hit ? (hit.to === '/' ? 'Dashboard' : hit.label.replace(' & APIs', '').replace('SSL / TLS Tracker', 'SSL / TLS')) : 'Dashboard';
+  return hit ? (hit.to === '/dashboard' ? 'Dashboard' : hit.label.replace(' & APIs', '').replace('SSL / TLS Tracker', 'SSL / TLS')) : 'Dashboard';
 }
 
 function GlobalSearch(): React.JSX.Element {

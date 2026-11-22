@@ -51,7 +51,8 @@ function ForgotModal({ initialEmail, onClose }: { initialEmail: string; onClose:
 export default function Login(): React.JSX.Element {
   const { user, login } = useAuth();
   const location = useLocation();
-  const from = (location.state as { from?: string } | null)?.from ?? '/';
+  const rawFrom = (location.state as { from?: string } | null)?.from;
+  const from = (!rawFrom || rawFrom === '/') ? '/dashboard' : rawFrom;
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

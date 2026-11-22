@@ -1,2 +1,5 @@
 node_modules
 /build
+.vscode
+AGENTS.md
+frontend/AGENTS.md
