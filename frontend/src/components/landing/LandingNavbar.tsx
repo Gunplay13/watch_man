@@ -23,7 +23,7 @@ export default function LandingNavbar(): React.JSX.Element {
   };
 
   return (
-    <header className="w-full border-b border-dashed border-wm-border relative bg-wm-bg/95 backdrop-blur-md sticky top-0 z-40">
+    <header className="w-full border-b border-dashed border-wm-border fixed top-0 inset-x-0 z-50 bg-wm-bg/95 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <nav className="flex items-center justify-between border-x border-dashed border-wm-border px-4 py-4 md:px-8">
           <Link to="/" className="flex items-center gap-2.5 text-decoration-none group">

@@ -9,7 +9,7 @@ export default function HeroSection(): React.JSX.Element {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="border-x border-dashed border-wm-border pt-20 pb-20 md:pt-28 md:pb-24 px-4 md:px-12 flex flex-col items-center text-center">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold tracking-tight text-wm-text leading-[1.12] max-w-3xl mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-semibold tracking-tight text-wm-text leading-[1.12] max-w-3xl mb-6">
             Synthetic API monitoring built for engineering teams
           </h1>
 
