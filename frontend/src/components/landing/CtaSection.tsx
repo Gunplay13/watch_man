@@ -16,7 +16,7 @@ export default function CtaSection(): React.JSX.Element {
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
           <Link
             to="/register"
-            className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-semibold text-xs hover:opacity-90 transition-opacity shadow-sm flex items-center gap-1.5"
+            className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-semibold text-xs hover:opacity-90 transition-opacity flex items-center gap-1.5"
           >
             <span>Start Monitoring Free</span>
             <ArrowRight size={14} />

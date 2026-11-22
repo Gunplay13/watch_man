@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Copy, Check, ArrowRight, Terminal } from 'lucide-react';
+import { Copy, Check, ArrowRight } from 'lucide-react';
 import TerminalMockup from './TerminalMockup';
 
 export default function HeroSection(): React.JSX.Element {
@@ -31,11 +31,6 @@ export default function HeroSection(): React.JSX.Element {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Column */}
         <div className="lg:col-span-7 flex flex-col items-start">
-          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md text-xs font-semibold bg-wm-surface border border-wm-border text-wm-muted mb-4">
-            <span className="w-1.5 h-1.5 rounded-sm bg-wm-accent" />
-            <span className="tracking-wide uppercase text-[11px]">Synthetic API &amp; Infrastructure Monitoring</span>
-          </div>
-
           <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-bold tracking-tight text-wm-text leading-[1.12] mb-4">
             Watchman Monitors for coding agents and developers
           </h1>
@@ -66,7 +61,7 @@ export default function HeroSection(): React.JSX.Element {
               Install for your agents
             </div>
 
-            <div className="flex items-center rounded-md border border-wm-border bg-wm-surface overflow-hidden shadow-sm">
+            <div className="flex items-center rounded-md border border-wm-border bg-wm-surface overflow-hidden">
               <select
                 value={pkgManager}
                 onChange={(e) => setPkgManager(e.target.value as any)}
@@ -93,12 +88,16 @@ export default function HeroSection(): React.JSX.Element {
               </button>
             </div>
 
-            {/* Agent Support Badges */}
+            {/* Agent Support Names (Clean Text, No Boxed Badges) */}
             <div className="flex items-center gap-2 mt-3.5 text-xs text-wm-muted flex-wrap">
-              <span className="font-medium px-2 py-0.5 rounded-md bg-wm-surface border border-wm-border text-wm-text text-[11px]">Claude Code</span>
-              <span className="font-medium px-2 py-0.5 rounded-md bg-wm-surface border border-wm-border text-wm-text text-[11px]">Codex</span>
-              <span className="font-medium px-2 py-0.5 rounded-md bg-wm-surface border border-wm-border text-wm-text text-[11px]">Cursor</span>
-              <span className="font-medium px-2 py-0.5 rounded-md bg-wm-surface border border-wm-border text-wm-text text-[11px]">Gemini</span>
+              <span className="font-medium text-wm-text">Supported:</span>
+              <span>Claude Code</span>
+              <span>•</span>
+              <span>Codex</span>
+              <span>•</span>
+              <span>Cursor</span>
+              <span>•</span>
+              <span>Gemini</span>
 
               <button
                 onClick={() => copyCmd('watchman init', true)}

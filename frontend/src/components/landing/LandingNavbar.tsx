@@ -27,14 +27,12 @@ export default function LandingNavbar(): React.JSX.Element {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3.5">
         <div className="flex items-center gap-8">
           <Link to="/" className="flex items-center gap-2.5 text-decoration-none">
-            <div className="w-7 h-7 rounded-md bg-wm-accent text-wm-accent-contrast font-bold flex items-center justify-center text-xs shadow-sm">
+            <div className="w-7 h-7 rounded-md bg-wm-accent text-wm-accent-contrast font-bold flex items-center justify-center text-xs">
               <Monitor size={15} strokeWidth={2.5} />
             </div>
-            <div className="flex items-center gap-2 font-bold tracking-tight text-sm text-wm-text">
+            <div className="flex items-center gap-1.5 font-bold tracking-tight text-sm text-wm-text">
               <span>WATCHMAN</span>
-              <span className="text-[10px] uppercase font-semibold tracking-wider px-1.5 py-0.5 rounded-md bg-wm-surface-2 text-wm-muted border border-wm-border">
-                Monitors
-              </span>
+              <span className="font-normal text-wm-muted text-xs">Monitors</span>
             </div>
           </Link>
 

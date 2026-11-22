@@ -28,9 +28,6 @@ export default function LiveSimulatorSection(): React.JSX.Element {
     <section id="simulator" className="py-16 px-6 border-b border-wm-border">
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mb-10">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-wm-muted mb-2">
-            Interactive Sandbox
-          </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-wm-text mb-3">
             Test a synthetic monitor in real-time
           </h2>
@@ -39,7 +36,7 @@ export default function LiveSimulatorSection(): React.JSX.Element {
           </p>
         </div>
 
-        <div className="rounded-lg border border-wm-border bg-wm-surface p-6 shadow-sm">
+        <div className="rounded-lg border border-wm-border bg-wm-surface p-6">
           {/* Preset Buttons */}
           <div className="flex items-center gap-2 mb-5 overflow-x-auto pb-1 text-xs">
             <span className="font-semibold text-wm-muted mr-1 uppercase text-[10px] tracking-wider">Presets:</span>
@@ -114,8 +111,8 @@ export default function LiveSimulatorSection(): React.JSX.Element {
               </div>
               <div>
                 <div className="text-xs font-semibold text-wm-text flex items-center gap-2">
-                  <span>WhatsApp Alert Hook</span>
-                  <span className="text-[10px] px-1.5 py-0.2 rounded-md bg-wm-surface text-wm-green border border-wm-border">Connected</span>
+                  <span>WhatsApp Alert Hook:</span>
+                  <span className="text-wm-green font-medium">Connected</span>
                 </div>
                 <p className="text-xs text-wm-muted mt-0.5">
                   Instant incident push delivered to on-call engineers via encrypted WhatsApp channel.

@@ -17,8 +17,8 @@ export default function LandingFooter(): React.JSX.Element {
           <p className="text-xs leading-relaxed max-w-sm">
             Lightweight, agentless synthetic monitoring for mission-critical APIs, SSL certificate chains, and server infrastructure.
           </p>
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-wm-surface border border-wm-border text-[11px] text-wm-muted">
-            <Activity size={12} className="text-wm-green" />
+          <div className="flex items-center gap-2 text-xs text-wm-muted">
+            <Activity size={13} className="text-wm-green" />
             <span>All Systems Operational (99.99% Global Uptime)</span>
           </div>
         </div>

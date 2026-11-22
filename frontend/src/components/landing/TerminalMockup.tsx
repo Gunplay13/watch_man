@@ -7,7 +7,7 @@ export default function TerminalMockup(): React.JSX.Element {
   const [tab, setTab] = useState<Tab>('agent');
 
   return (
-    <div className="rounded-lg border border-wm-terminal-border bg-wm-terminal-bg shadow-lg overflow-hidden font-mono text-xs">
+    <div className="rounded-lg border border-wm-terminal-border bg-wm-terminal-bg overflow-hidden font-mono text-xs">
       {/* Mac Window Header */}
       <div className="flex items-center justify-between px-3.5 py-2.5 bg-wm-surface-2 border-b border-wm-terminal-border">
         <div className="flex items-center gap-1.5">
