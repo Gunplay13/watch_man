@@ -1,5 +1,4 @@
 import React from 'react';
-import { Clock, Check, Activity } from 'lucide-react';
 
 export default function UptimePerformanceSection(): React.JSX.Element {
   return (
@@ -18,29 +17,19 @@ export default function UptimePerformanceSection(): React.JSX.Element {
                   Catch problems before your customers do. Continuously check if your website is working correctly and get notified of outages.
                 </p>
 
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md bg-wm-surface border border-wm-border flex items-center justify-center text-wm-accent shrink-0 mt-0.5">
-                      <Clock size={14} />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-semibold text-wm-text">Check your website status every minute</h3>
-                      <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
-                        Find out about downtime as quickly as possible and fix issues before they impact your business.
-                      </p>
-                    </div>
+                <div className="space-y-5 pt-2">
+                  <div>
+                    <h3 className="text-sm font-semibold text-wm-text">Check your website status every minute</h3>
+                    <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
+                      Find out about downtime as quickly as possible and fix issues before they impact your business.
+                    </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md bg-wm-surface border border-wm-border flex items-center justify-center text-wm-accent shrink-0 mt-0.5">
-                      <Check size={14} />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-semibold text-wm-text">Easy setup</h3>
-                      <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
-                        Add a URL, pick how often to check it, and set up notification channels.
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-wm-text">Easy setup</h3>
+                    <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
+                      Add a URL, pick how often to check it, and set up notification channels.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -90,17 +79,12 @@ export default function UptimePerformanceSection(): React.JSX.Element {
                   Watchman doesn&apos;t just check that your website is loading correctly, but also keeps track of how fast your server responds.
                 </p>
 
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md bg-wm-surface border border-wm-border flex items-center justify-center text-wm-accent shrink-0 mt-0.5">
-                      <Activity size={14} />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-wm-text">Trigger alerts for slow responses</h4>
-                      <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
-                        Even if your website is technically working, customers may still run into issues with a slow site. Configure custom alert criteria and fail checks if responses are too slow.
-                      </p>
-                    </div>
+                <div className="space-y-5 pt-2">
+                  <div>
+                    <h4 className="text-sm font-semibold text-wm-text">Trigger alerts for slow responses</h4>
+                    <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
+                      Even if your website is technically working, customers may still run into issues with a slow site. Configure custom alert criteria and fail checks if responses are too slow.
+                    </p>
                   </div>
                 </div>
               </div>

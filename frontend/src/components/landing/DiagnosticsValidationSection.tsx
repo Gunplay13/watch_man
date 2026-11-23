@@ -1,5 +1,4 @@
 import React from 'react';
-import { CheckSquare, ShieldCheck, Globe, FileText } from 'lucide-react';
 
 export default function DiagnosticsValidationSection(): React.JSX.Element {
   return (
@@ -15,29 +14,19 @@ export default function DiagnosticsValidationSection(): React.JSX.Element {
                   Advanced check options
                 </h2>
 
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md bg-wm-surface border border-wm-border flex items-center justify-center text-wm-accent shrink-0 mt-0.5">
-                      <CheckSquare size={14} />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-semibold text-wm-text">Validate response details</h3>
-                      <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
-                        Check that HTTP status codes, response headers, and response body content match what you&apos;re expecting.
-                      </p>
-                    </div>
+                <div className="space-y-5 pt-2">
+                  <div>
+                    <h3 className="text-sm font-semibold text-wm-text">Validate response details</h3>
+                    <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
+                      Check that HTTP status codes, response headers, and response body content match what you&apos;re expecting.
+                    </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md bg-wm-surface border border-wm-border flex items-center justify-center text-wm-accent shrink-0 mt-0.5">
-                      <ShieldCheck size={14} />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-semibold text-wm-text">Reduce false alarms</h3>
-                      <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
-                        Confirm failures from a second region and only alert after several consecutive failures.
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-wm-text">Reduce false alarms</h3>
+                    <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
+                      Confirm failures from a second region and only alert after several consecutive failures.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -87,29 +76,19 @@ export default function DiagnosticsValidationSection(): React.JSX.Element {
                   Whatever your site served when the check failed is usually gone by the time anyone looks. Watchman keeps it: the status code, the response headers, and the start of the page itself.
                 </p>
 
-                <div className="space-y-4 pt-2">
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md bg-wm-surface border border-wm-border flex items-center justify-center text-wm-accent shrink-0 mt-0.5">
-                      <Globe size={14} />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-wm-text">Compare what each region saw</h4>
-                      <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
-                        Every request made around the outage is listed with its own result, plus a breakdown of where the time went across DNS, TCP, SSL, and waiting for the response.
-                      </p>
-                    </div>
+                <div className="space-y-5 pt-2">
+                  <div>
+                    <h4 className="text-sm font-semibold text-wm-text">Compare what each region saw</h4>
+                    <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
+                      Every request made around the outage is listed with its own result, plus a breakdown of where the time went across DNS, TCP, SSL, and waiting for the response.
+                    </p>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-7 h-7 rounded-md bg-wm-surface border border-wm-border flex items-center justify-center text-wm-accent shrink-0 mt-0.5">
-                      <FileText size={14} />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-wm-text">Start with a plain explanation</h4>
-                      <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
-                        Each failure opens with a sentence saying what went wrong, measured against the validation rules the monitor was using at the time.
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-wm-text">Start with a plain explanation</h4>
+                    <p className="text-xs font-normal text-wm-muted mt-1 leading-relaxed">
+                      Each failure opens with a sentence saying what went wrong, measured against the validation rules the monitor was using at the time.
+                    </p>
                   </div>
                 </div>
               </div>
