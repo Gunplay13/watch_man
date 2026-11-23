@@ -89,6 +89,10 @@
 .wm-screenshot-light { display: none; }
 [data-theme="light"] .wm-screenshot-dark { display: none; }
 [data-theme="light"] .wm-screenshot-light { display: block; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
 * { box-sizing: border-box; }
 body {
   margin: 0;

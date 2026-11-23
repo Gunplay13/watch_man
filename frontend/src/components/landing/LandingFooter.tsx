@@ -97,7 +97,7 @@ export default function LandingFooter(): React.JSX.Element {
               </div>
 
               {/* Resources */}
-              <div className="flex flex-col">
+              <div id="blog" className="flex flex-col scroll-mt-24">
                 <h3 className="text-sm font-medium text-wm-text mb-4">Resources</h3>
                 <ul className="flex flex-col gap-2.5">
                   <li>

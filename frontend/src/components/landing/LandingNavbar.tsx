@@ -5,7 +5,15 @@ import { useAuth } from '../../state/Auth';
 
 export default function LandingNavbar(): React.JSX.Element {
   const { user } = useAuth();
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof document !== 'undefined') {
+      const current = document.documentElement.dataset.theme as 'dark' | 'light' | undefined;
+      if (current) return current;
+      const saved = localStorage.getItem('wm-theme') as 'dark' | 'light' | null;
+      if (saved) return saved;
+    }
+    return 'dark';
+  });
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
