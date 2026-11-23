@@ -37,12 +37,9 @@ export default function LandingNavbar(): React.JSX.Element {
           </Link>
 
           <div className="hidden md:flex items-center gap-7 text-xs font-normal text-wm-muted">
-            <a href="#uptime" className="hover:text-wm-text transition-colors">Uptime</a>
-            <a href="#performance" className="hover:text-wm-text transition-colors">Performance</a>
-            <a href="#validation" className="hover:text-wm-text transition-colors">Validations</a>
-            <a href="#diagnostics" className="hover:text-wm-text transition-colors">Diagnostics</a>
-            <a href="#channels" className="hover:text-wm-text transition-colors">Alert Channels</a>
-            <a href="#install" className="hover:text-wm-text transition-colors">CLI</a>
+            <a href="#uptime" className="hover:text-wm-text transition-colors">Products</a>
+            <a href="#install" className="hover:text-wm-text transition-colors">Docs</a>
+            <a href="#blog" className="hover:text-wm-text transition-colors">Blogs</a>
           </div>
 
           <div className="flex items-center gap-3">

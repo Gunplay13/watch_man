@@ -100,24 +100,24 @@ export default function LandingFooter(): React.JSX.Element {
                 </ul>
               </div>
 
-              {/* Platform */}
+              {/* Resources */}
               <div className="flex flex-col">
-                <h3 className="text-sm font-medium text-wm-text mb-4">Platform</h3>
+                <h3 className="text-sm font-medium text-wm-text mb-4">Resources</h3>
                 <ul className="flex flex-col gap-2.5">
                   <li>
-                    <a href="#how-it-works" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
-                      How It Works
+                    <a href="#install" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                      Docs
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#blog" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                      Blogs
                     </a>
                   </li>
                   <li>
                     <Link to="/login" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
                       Sign In
                     </Link>
-                  </li>
-                  <li>
-                    <a href="#install" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
-                      Terminal NPM
-                    </a>
                   </li>
                   <li>
                     <span className="text-xs text-wm-muted/60">Release v2.4.0</span>
