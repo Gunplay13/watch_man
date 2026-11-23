@@ -74,7 +74,8 @@ export default function LandingNavbar(): React.JSX.Element {
             {user ? (
               <Link
                 to="/dashboard"
-                className="hidden sm:inline-flex h-9 px-4 rounded-md bg-wm-accent text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 items-center justify-center"
+                style={{ color: '#ffffff' }}
+                className="hidden sm:inline-flex h-9 px-4 rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 items-center justify-center"
               >
                 Get Started
               </Link>
@@ -88,7 +89,8 @@ export default function LandingNavbar(): React.JSX.Element {
                 </Link>
                 <Link
                   to="/register"
-                  className="hidden sm:inline-flex h-9 px-4 rounded-md bg-wm-accent text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 items-center justify-center"
+                  style={{ color: '#ffffff' }}
+                  className="hidden sm:inline-flex h-9 px-4 rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 items-center justify-center"
                 >
                   Get Started
                 </Link>
@@ -140,7 +142,8 @@ export default function LandingNavbar(): React.JSX.Element {
                 <Link
                   to="/dashboard"
                   onClick={() => setMobileOpen(false)}
-                  className="h-10 w-full rounded-md bg-wm-accent text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 flex items-center justify-center"
+                  style={{ color: '#ffffff' }}
+                  className="h-10 w-full rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 flex items-center justify-center"
                 >
                   Go to Dashboard
                 </Link>
@@ -149,7 +152,8 @@ export default function LandingNavbar(): React.JSX.Element {
                   <Link
                     to="/register"
                     onClick={() => setMobileOpen(false)}
-                    className="h-10 w-full rounded-md bg-wm-accent text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 flex items-center justify-center"
+                    style={{ color: '#ffffff' }}
+                    className="h-10 w-full rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 flex items-center justify-center"
                   >
                     Get Started
                   </Link>

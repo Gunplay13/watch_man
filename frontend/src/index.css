@@ -17,6 +17,7 @@
   --color-wm-accent-subtle: var(--wm-accent-subtle);
   --color-wm-accent-glow: var(--wm-accent-glow);
   --color-wm-accent-contrast: var(--wm-accent-contrast);
+  --color-wm-primary-foreground: var(--wm-primary-foreground);
   --color-wm-green: var(--wm-green);
   --color-wm-green-subtle: var(--wm-green-subtle);
   --color-wm-amber: var(--wm-amber);
@@ -43,6 +44,7 @@
   --wm-accent-subtle: rgba(45, 212, 191, 0.12);
   --wm-accent-glow: rgba(45, 212, 191, 0.22);
   --wm-accent-contrast: #ffffff;
+  --wm-primary-foreground: #ffffff;
   --wm-green: #22c55e;
   --wm-green-subtle: rgba(34, 197, 94, 0.15);
   --wm-amber: #f59e0b;
@@ -69,6 +71,7 @@
   --wm-accent-subtle: rgba(13, 148, 136, 0.1);
   --wm-accent-glow: rgba(13, 148, 136, 0.18);
   --wm-accent-contrast: #ffffff;
+  --wm-primary-foreground: #ffffff;
   --wm-green: #16a34a;
   --wm-green-subtle: rgba(22, 163, 74, 0.12);
   --wm-amber: #d97706;
@@ -109,12 +112,19 @@ a { color: inherit; }
 .wm-muted { color: var(--wm-muted); }
 .wm-grid { display: grid; gap: 16px; }
 
+/* Primary action CTA buttons: fixed constant pure white text regardless of theme or inheritance */
+.bg-wm-accent,
+a.bg-wm-accent,
+button.bg-wm-accent {
+  color: #ffffff !important;
+}
+
 /* Buttons */
 .wm-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   border-radius: 10px; border: 1px solid transparent; cursor: pointer;
   font-size: 14px; font-weight: 600; padding: 10px 16px;
-  background: var(--wm-accent); color: #06251f; transition: filter .15s;
+  background: var(--wm-accent); color: #ffffff; transition: filter .15s;
 }
 .wm-btn:hover { filter: brightness(1.1); }
 .wm-btn:disabled { opacity: .5; cursor: not-allowed; }

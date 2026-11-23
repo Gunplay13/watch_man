@@ -17,20 +17,21 @@ export default function HeroSection(): React.JSX.Element {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="border-x border-dashed border-wm-border pt-12 pb-14 md:pt-16 md:pb-16 px-4 md:px-12 flex flex-col items-center text-center">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-wm-text leading-[1.12] max-w-4xl mb-4">
-            Know the moment your endpoints are slow or dead
+          <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-semibold tracking-tight text-wm-text leading-[1.12] max-w-4xl mb-4">
+            Catch downtime and performance regressions before your users do
           </h1>
 
           {/* Clean Subtext */}
           <p className="text-sm sm:text-base text-wm-muted max-w-2xl leading-relaxed mb-6 font-normal">
-            Continuously monitor your APIs for uptime and response latency. Receive instant alerts on Telegram, Slack, WhatsApp, Email, or Discord when an endpoint fails or degrades.
+            Continuously monitor your endpoints for uptime, response latency, and payload validity. Receive instant alerts on Telegram, WhatsApp, Slack, Discord, or Email the moment an outage occurs.
           </p>
 
           {/* Action CTAs */}
           <div className="flex items-center justify-center gap-3.5 mb-7 flex-wrap">
             <Link
               to="/register"
-              className="h-11 px-6 rounded-md bg-wm-accent text-white font-medium text-sm hover:opacity-90 active:translate-y-[1px] transition-all inline-flex items-center justify-center"
+              style={{ color: '#ffffff' }}
+              className="h-11 px-6 rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-sm hover:opacity-90 active:translate-y-[1px] transition-all inline-flex items-center justify-center"
             >
               Get Started
             </Link>
@@ -70,16 +71,16 @@ export default function HeroSection(): React.JSX.Element {
                 <span className="w-2.5 h-2.5 rounded-sm bg-wm-border" />
                 <span className="ml-2 text-wm-text font-medium text-[11px]">app.watchman.dev</span>
               </div>
-              <span className="text-[11px] text-wm-muted font-normal">Endpoints &amp; APIs</span>
+              <span className="text-[11px] text-wm-muted font-normal">Uptime Monitoring</span>
             </div>
             <img
-              src="/hero-preview-dark.png"
+              src="/hero-preview-dark.png?v=2"
               alt="Watchman synthetic endpoint monitoring dashboard - dark mode"
               className="w-full h-auto wm-screenshot-dark"
               loading="eager"
             />
             <img
-              src="/hero-preview-light.png"
+              src="/hero-preview-light.png?v=2"
               alt="Watchman synthetic endpoint monitoring dashboard - light mode"
               className="w-full h-auto wm-screenshot-light"
               loading="eager"
