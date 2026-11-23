@@ -1,8 +1,8 @@
 import React from 'react';
 import LandingNavbar from '../components/landing/LandingNavbar';
 import HeroSection from '../components/landing/HeroSection';
-import FeaturesSection from '../components/landing/FeaturesSection';
-import HowItWorksSection from '../components/landing/HowItWorksSection';
+import UptimePerformanceSection from '../components/landing/UptimePerformanceSection';
+import DiagnosticsValidationSection from '../components/landing/DiagnosticsValidationSection';
 import AlertChannelsSection from '../components/landing/AlertChannelsSection';
 import CtaSection from '../components/landing/CtaSection';
 import LandingFooter from '../components/landing/LandingFooter';
@@ -13,8 +13,8 @@ export default function Landing(): React.JSX.Element {
       <LandingNavbar />
       <main className="flex-1 pt-16">
         <HeroSection />
-        <FeaturesSection />
-        <HowItWorksSection />
+        <UptimePerformanceSection />
+        <DiagnosticsValidationSection />
         <AlertChannelsSection />
         <CtaSection />
       </main>

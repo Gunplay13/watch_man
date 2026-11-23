@@ -36,18 +36,23 @@ export default function LandingFooter(): React.JSX.Element {
                 <h3 className="text-sm font-medium text-wm-text mb-4">Product</h3>
                 <ul className="flex flex-col gap-2.5">
                   <li>
-                    <a href="#features" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                    <a href="#uptime" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
                       Uptime Checks
                     </a>
                   </li>
                   <li>
-                    <a href="#features" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                    <a href="#performance" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
                       Latency Tracking
                     </a>
                   </li>
                   <li>
-                    <a href="#features" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
-                      SSL Guardian
+                    <a href="#validation" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                      Validations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#diagnostics" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                      Diagnostics
                     </a>
                   </li>
                   <li>
