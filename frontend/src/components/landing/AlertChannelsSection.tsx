@@ -64,7 +64,7 @@ export default function AlertChannelsSection(): React.JSX.Element {
               <button
                 onClick={() => setIncidentType('dead')}
                 className={`px-3 py-1 rounded text-xs transition-colors ${
-                  incidentType === 'dead' ? 'bg-wm-red text-wm-accent-contrast font-medium' : 'text-wm-muted hover:text-wm-text'
+                  incidentType === 'dead' ? 'bg-wm-red text-white font-medium' : 'text-wm-muted hover:text-wm-text'
                 }`}
               >
                 Dead Endpoint (503)
@@ -72,7 +72,7 @@ export default function AlertChannelsSection(): React.JSX.Element {
               <button
                 onClick={() => setIncidentType('slow')}
                 className={`px-3 py-1 rounded text-xs transition-colors ${
-                  incidentType === 'slow' ? 'bg-wm-amber text-wm-accent-contrast font-medium' : 'text-wm-muted hover:text-wm-text'
+                  incidentType === 'slow' ? 'bg-wm-amber text-white font-medium' : 'text-wm-muted hover:text-wm-text'
                 }`}
               >
                 Slow Endpoint (392ms)

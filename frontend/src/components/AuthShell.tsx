@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor } from 'lucide-react';
 import { Icon } from './Icon';
 import '../auth.css';
 
@@ -9,9 +8,11 @@ export function AuthShell({ children }: { children: React.ReactNode }): React.JS
     <div className="wm-auth">
       <div className="wm-auth-main">
         <Link to="/" className="wm-auth-brand group">
-          <div className="w-8 h-8 rounded-md bg-wm-accent text-wm-accent-contrast font-bold flex items-center justify-center text-xs">
-            <Monitor size={16} strokeWidth={2.5} />
-          </div>
+          <img
+            src="/logo.png"
+            alt="Watchman"
+            className="h-8 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+          />
           <div className="flex items-center gap-1.5 text-sm text-wm-text font-semibold tracking-tight">
             <span>WATCHMAN</span>
             <span className="font-normal text-wm-muted text-xs">MONITORS</span>

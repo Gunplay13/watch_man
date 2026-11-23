@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor } from 'lucide-react';
 
 export default function LandingFooter(): React.JSX.Element {
   return (
@@ -12,9 +11,11 @@ export default function LandingFooter(): React.JSX.Element {
             {/* Left: Brand & Elevator Pitch */}
             <div className="max-w-xs md:max-w-sm">
               <Link to="/" className="inline-flex items-center gap-2.5 text-decoration-none group">
-                <div className="w-7 h-7 rounded-md bg-wm-accent text-wm-accent-contrast font-bold flex items-center justify-center text-xs">
-                  <Monitor size={15} strokeWidth={2.5} />
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="Watchman"
+                  className="h-7 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+                />
                 <div className="flex items-center gap-1.5 text-sm text-wm-text font-semibold tracking-tight">
                   <span>WATCHMAN</span>
                   <span className="font-normal text-wm-muted text-xs">MONITORS</span>

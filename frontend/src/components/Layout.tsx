@@ -109,7 +109,7 @@ export default function Layout(): React.JSX.Element {
       <header className="wm-topbar">
         <button className="wm-iconbtn wm-burger" aria-label="Toggle navigation" onClick={() => setNavOpen((o) => !o)}><Icon name="menu" size={20} /></button>
         <div className="wm-brand">
-          <span className="wm-brand-mark">W</span>
+          <img src="/logo.png" alt="Watchman" style={{ height: '22px', width: 'auto', marginRight: '8px', verticalAlign: 'middle' }} />
           WATCHMAN <span className="wm-brand-sep">//</span> <span className="wm-brand-title">{titleFor(pathname)}</span>
         </div>
         <GlobalSearch />

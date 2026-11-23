@@ -17,7 +17,7 @@ export default function CtaSection(): React.JSX.Element {
           <div className="flex items-center justify-center mb-7">
             <Link
               to="/register"
-              className="h-11 px-7 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-sm hover:opacity-90 active:translate-y-[1px] transition-all inline-flex items-center justify-center"
+              className="h-11 px-7 rounded-md bg-wm-accent text-white font-medium text-sm hover:opacity-90 active:translate-y-[1px] transition-all inline-flex items-center justify-center"
             >
               Get Started
             </Link>
