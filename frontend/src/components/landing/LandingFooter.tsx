@@ -52,8 +52,8 @@ export default function LandingFooter(): React.JSX.Element {
                     </a>
                   </li>
                   <li>
-                    <a href="#install" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
-                      CLI Tool
+                    <a href="#channels" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                      Alert Channels
                     </a>
                   </li>
                   <li>
@@ -101,7 +101,7 @@ export default function LandingFooter(): React.JSX.Element {
                 <h3 className="text-sm font-medium text-wm-text mb-4">Resources</h3>
                 <ul className="flex flex-col gap-2.5">
                   <li>
-                    <a href="#install" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
+                    <a href="#validation" className="text-xs text-wm-muted hover:text-wm-text transition-colors duration-200">
                       Docs
                     </a>
                   </li>

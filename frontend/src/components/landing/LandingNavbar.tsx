@@ -56,7 +56,7 @@ export default function LandingNavbar(): React.JSX.Element {
               Products
             </a>
             <a
-              href="#install"
+              href="#validation"
               className="text-wm-muted hover:text-wm-text transition-colors duration-200"
             >
               Docs
@@ -129,7 +129,7 @@ export default function LandingNavbar(): React.JSX.Element {
                 Products
               </a>
               <a
-                href="#install"
+                href="#validation"
                 onClick={() => setMobileOpen(false)}
                 className="text-sm font-normal text-wm-muted hover:text-wm-text transition-colors duration-200 py-1"
               >
