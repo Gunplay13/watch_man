@@ -47,7 +47,7 @@ export default function AlertChannelsSection(): React.JSX.Element {
 
   return (
     <section id="channels" className="w-full border-b border-dashed border-wm-border bg-wm-surface/20">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="border-x border-dashed border-wm-border py-14 md:py-16 px-4 md:px-12">
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">

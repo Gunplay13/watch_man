@@ -37,7 +37,7 @@ const CAPABILITIES = [
 export default function FeaturesSection(): React.JSX.Element {
   return (
     <section id="features" className="w-full border-b border-dashed border-wm-border bg-wm-bg">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="border-x border-dashed border-wm-border py-14 md:py-16 px-4 md:px-12">
           {/* Section Header */}
           <div className="max-w-xl mb-10 md:mb-12">

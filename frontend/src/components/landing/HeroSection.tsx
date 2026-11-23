@@ -14,15 +14,15 @@ export default function HeroSection(): React.JSX.Element {
 
   return (
     <section className="w-full border-b border-dashed border-wm-border relative">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="border-x border-dashed border-wm-border pt-12 pb-14 md:pt-16 md:pb-16 px-4 md:px-12 flex flex-col items-center text-center">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-wm-text leading-[1.12] max-w-3xl mb-4">
+          <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-wm-text leading-[1.12] max-w-4xl mb-4">
             Know the moment your endpoints are slow or dead
           </h1>
 
           {/* Clean Subtext */}
-          <p className="text-sm sm:text-base text-wm-muted max-w-xl leading-relaxed mb-6 font-normal">
+          <p className="text-sm sm:text-base text-wm-muted max-w-2xl leading-relaxed mb-6 font-normal">
             Continuously monitor your APIs for uptime and response latency. Receive instant alerts on Telegram, Slack, WhatsApp, Email, or Discord when an endpoint fails or degrades.
           </p>
 
@@ -62,7 +62,7 @@ export default function HeroSection(): React.JSX.Element {
           </div>
 
           {/* Clean Product Preview Visual (Image-First) */}
-          <div className="w-full max-w-5xl rounded-lg border border-wm-border bg-wm-surface overflow-hidden">
+          <div className="w-full max-w-6xl rounded-lg border border-wm-border bg-wm-surface overflow-hidden">
             <div className="flex items-center justify-between px-4 py-2.5 bg-wm-surface-2 border-b border-wm-border text-xs font-mono text-wm-muted">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-sm bg-wm-border" />

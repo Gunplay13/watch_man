@@ -5,7 +5,7 @@ import { Check } from 'lucide-react';
 export default function CtaSection(): React.JSX.Element {
   return (
     <section className="w-full border-b border-dashed border-wm-border bg-wm-surface/10">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="border-x border-dashed border-wm-border py-14 md:py-16 px-4 md:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-wm-text mb-2.5">
             Never miss an endpoint outage or slowdown
