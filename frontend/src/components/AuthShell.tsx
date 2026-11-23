@@ -7,15 +7,12 @@ export function AuthShell({ children }: { children: React.ReactNode }): React.JS
   return (
     <div className="wm-auth">
       <div className="wm-auth-main">
-        <Link to="/" className="wm-auth-brand group">
+        <Link to="/" className="wm-auth-brand group" aria-label="Watchman Home">
           <img
             src="/logo.png"
             alt="Watchman"
-            className="h-7 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+            className="h-9 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
           />
-          <span className="text-sm text-wm-text font-semibold tracking-tight">
-            WATCHMAN
-          </span>
         </Link>
         <div className="wm-auth-card">
           {children}

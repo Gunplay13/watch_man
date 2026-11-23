@@ -85,14 +85,11 @@ export default function Login(): React.JSX.Element {
 
   return (
     <AuthShell>
-      <div>
-        <h2>Welcome back</h2>
+      <div className="wm-auth-header text-center">
+        <h2>Sign in to Watchman</h2>
         <p className="wm-auth-sub">Sign in to your Watchman dashboard.</p>
       </div>
 
-      {location.state && (location.state as { from?: string }).from && (
-        <div className="wm-alert wm-alert--info" role="status">Please sign in to continue.</div>
-      )}
       {formError && <div className="wm-alert wm-alert--err" role="alert"><Icon name="close" />{formError}</div>}
 
       <form className="wm-auth-form" onSubmit={submit} noValidate>

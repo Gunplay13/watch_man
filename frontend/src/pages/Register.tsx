@@ -58,8 +58,8 @@ export default function Register(): React.JSX.Element {
 
   return (
     <AuthShell>
-      <div>
-        <h2>Create your account</h2>
+      <div className="wm-auth-header text-center">
+        <h2>Create a Watchman account</h2>
         <p className="wm-auth-sub">Start monitoring endpoints, certificates and servers.</p>
       </div>
       {formError && <div className="wm-alert wm-alert--err" role="alert"><Icon name="close" />{formError}</div>}

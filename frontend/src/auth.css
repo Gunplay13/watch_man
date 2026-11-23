@@ -21,9 +21,13 @@
 .wm-auth-brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 28px;
+  justify-content: center;
+  margin-bottom: 24px;
   text-decoration: none;
+}
+
+.wm-auth-header {
+  text-align: center;
 }
 
 .wm-auth-card {
@@ -43,6 +47,7 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--wm-text);
+  text-align: center;
 }
 
 .wm-auth-card .wm-auth-sub {
@@ -50,6 +55,7 @@
   color: var(--wm-muted);
   font-size: 13px;
   font-weight: 400;
+  text-align: center;
 }
 
 .wm-auth-form {
