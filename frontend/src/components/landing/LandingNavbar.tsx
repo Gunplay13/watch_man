@@ -28,16 +28,15 @@ export default function LandingNavbar(): React.JSX.Element {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <nav className="flex items-center justify-between border-x border-dashed border-wm-border px-4 py-4 md:px-8">
           {/* Brand */}
-          <Link to="/" className="flex items-center gap-2.5 text-decoration-none group">
+          <Link to="/" className="flex items-center gap-2 text-decoration-none group">
             <img
               src="/logo.png"
               alt="Watchman"
-              className="h-7 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+              className="h-6 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
             />
-            <div className="flex items-center gap-1.5 text-sm text-wm-text font-semibold tracking-tight">
-              <span>WATCHMAN</span>
-              <span className="font-normal text-wm-muted text-xs">MONITORS</span>
-            </div>
+            <span className="text-sm text-wm-text font-semibold tracking-tight">
+              WATCHMAN
+            </span>
           </Link>
 
           {/* Desktop Nav Items with Clean Text Hover States & Transitions */}

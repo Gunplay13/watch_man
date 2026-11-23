@@ -11,12 +11,11 @@ export function AuthShell({ children }: { children: React.ReactNode }): React.JS
           <img
             src="/logo.png"
             alt="Watchman"
-            className="h-8 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+            className="h-7 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
           />
-          <div className="flex items-center gap-1.5 text-sm text-wm-text font-semibold tracking-tight">
-            <span>WATCHMAN</span>
-            <span className="font-normal text-wm-muted text-xs">MONITORS</span>
-          </div>
+          <span className="text-sm text-wm-text font-semibold tracking-tight">
+            WATCHMAN
+          </span>
         </Link>
         <div className="wm-auth-card">
           {children}

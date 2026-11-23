@@ -10,16 +10,15 @@ export default function LandingFooter(): React.JSX.Element {
           <div className="w-full px-6 md:px-8 lg:px-12 pt-14 md:pt-16 pb-12 md:pb-16 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 lg:gap-16">
             {/* Left: Brand & Elevator Pitch */}
             <div className="max-w-xs md:max-w-sm">
-              <Link to="/" className="inline-flex items-center gap-2.5 text-decoration-none group">
+              <Link to="/" className="inline-flex items-center gap-2 text-decoration-none group">
                 <img
                   src="/logo.png"
                   alt="Watchman"
-                  className="h-7 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+                  className="h-6 w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
                 />
-                <div className="flex items-center gap-1.5 text-sm text-wm-text font-semibold tracking-tight">
-                  <span>WATCHMAN</span>
-                  <span className="font-normal text-wm-muted text-xs">MONITORS</span>
-                </div>
+                <span className="text-sm text-wm-text font-semibold tracking-tight">
+                  WATCHMAN
+                </span>
               </Link>
               <p className="text-sm text-wm-muted mt-4 leading-relaxed font-normal">
                 Autonomous synthetic API and endpoint monitoring. Track uptime, catch slow response regressions, and receive instant alerts before outages impact users.
