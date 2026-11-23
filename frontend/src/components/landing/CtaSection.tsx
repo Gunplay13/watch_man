@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check } from 'lucide-react';
 
 export default function CtaSection(): React.JSX.Element {
   return (
@@ -10,11 +9,11 @@ export default function CtaSection(): React.JSX.Element {
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-wm-text mb-2.5">
             Never miss an endpoint outage or slowdown
           </h2>
-          <p className="text-sm font-normal text-wm-muted max-w-md mx-auto leading-relaxed mb-6">
-            Connect Telegram, Slack, WhatsApp, Email, or Discord in under 60 seconds. Free during developer preview.
+          <p className="text-sm font-normal text-wm-muted max-w-xl mx-auto leading-relaxed mb-6">
+            Get instant failure alerts, exact HTTP status codes, and latency spikes delivered directly to your team on Telegram, WhatsApp, Slack, Discord, or Email before your users notice.
           </p>
 
-          <div className="flex items-center justify-center mb-7">
+          <div className="flex items-center justify-center">
             <Link
               to="/register"
               style={{ color: '#ffffff' }}
@@ -22,21 +21,6 @@ export default function CtaSection(): React.JSX.Element {
             >
               Get Started
             </Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-6 text-xs text-wm-muted/80 font-normal flex-wrap">
-            <div className="flex items-center gap-1.5">
-              <Check size={13} className="text-wm-accent" />
-              <span>Dead endpoint detection</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Check size={13} className="text-wm-accent" />
-              <span>Slowdown latency warnings</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Check size={13} className="text-wm-accent" />
-              <span>5 notification channels</span>
-            </div>
           </div>
         </div>
       </div>

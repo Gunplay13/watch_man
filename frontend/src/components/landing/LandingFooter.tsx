@@ -23,10 +23,6 @@ export default function LandingFooter(): React.JSX.Element {
               <p className="text-sm text-wm-muted mt-4 leading-relaxed font-normal">
                 Autonomous synthetic API and endpoint monitoring. Track uptime, catch slow response regressions, and receive instant alerts before outages impact users.
               </p>
-              <div className="flex items-center gap-2 text-xs text-wm-muted mt-5">
-                <span className="w-2 h-2 rounded-sm bg-wm-green" />
-                <span>All systems operational (99.99% uptime)</span>
-              </div>
             </div>
 
             {/* Right: Nav Columns */}
