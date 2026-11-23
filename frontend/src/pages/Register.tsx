@@ -73,7 +73,7 @@ export default function Register(): React.JSX.Element {
         </div>
         <div className="wm-field">
           <label htmlFor="reg-email">Work email</label>
-          <input id="reg-email" type="email" autoComplete="email" placeholder="you@company.com" value={email} aria-invalid={errors.email ? true : undefined}
+          <input id="reg-email" type="email" autoComplete="email" value={email} aria-invalid={errors.email ? true : undefined}
             onChange={(e) => { setEmail(e.target.value); clear('email'); }} />
           {errors.email && <span className="wm-field-error" role="alert">{errors.email}</span>}
         </div>

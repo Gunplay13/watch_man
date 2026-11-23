@@ -173,8 +173,8 @@ button.bg-wm-accent {
 .wm-form { display: flex; flex-direction: column; gap: 14px; }
 .wm-field { display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
 .wm-field input, .wm-field select {
-  background: var(--wm-surface-2); border: 1px solid var(--wm-border); border-radius: 10px;
-  color: var(--wm-text); padding: 10px 12px; font-size: 14px;
+  background: var(--wm-surface-2); border: 1px solid var(--wm-border); border-radius: 6px;
+  color: var(--wm-text); padding: 8px 12px; font-size: 13px;
 }
 .wm-field-row { display: flex; gap: 12px; align-items: center; font-size: 13px; }
 .wm-form-actions { display: flex; gap: 10px; flex-wrap: wrap; }

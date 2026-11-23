@@ -110,6 +110,34 @@
 
 .wm-auth-foot { text-align: center; font-size: 13px; color: var(--wm-muted); }
 
+.wm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wm-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--wm-text);
+}
+
+.wm-field input {
+  background: var(--wm-surface-2);
+  border: 1px solid var(--wm-border);
+  border-radius: 6px;
+  color: var(--wm-text);
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 20px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.wm-field input:focus {
+  border-color: var(--wm-accent);
+}
+
 .wm-pw { position: relative; display: flex; }
 .wm-pw input { width: 100%; padding-right: 40px; }
 .wm-pw .wm-iconbtn { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); }

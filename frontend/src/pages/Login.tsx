@@ -95,7 +95,7 @@ export default function Login(): React.JSX.Element {
       <form className="wm-auth-form" onSubmit={submit} noValidate>
         <div className="wm-field">
           <label htmlFor="login-email">Email</label>
-          <input id="login-email" type="email" autoComplete="username" placeholder="you@company.com" value={email} autoFocus
+          <input id="login-email" type="email" autoComplete="username" value={email} autoFocus
             aria-invalid={errors.email ? true : undefined} onChange={(e) => { setEmail(e.target.value); setErrors((x) => ({ ...x, email: undefined })); }} />
           {errors.email && <span className="wm-field-error" role="alert">{errors.email}</span>}
         </div>
