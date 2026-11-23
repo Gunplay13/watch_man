@@ -40,7 +40,7 @@ export default function AlertChannelsSection(): React.JSX.Element {
           {/* Header */}
           <div className="max-w-2xl mb-8">
             <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-wm-text mb-2">
-              Instant alerts on your favorite channels
+              Instant alerts on your preferred channels
             </h2>
             <p className="text-sm font-normal text-wm-muted leading-relaxed">
               Get immediate notifications via Telegram, Slack, WhatsApp, Email, or Discord the moment an endpoint degrades or goes offline.
