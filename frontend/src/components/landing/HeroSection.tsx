@@ -30,13 +30,13 @@ export default function HeroSection(): React.JSX.Element {
           <div className="flex items-center justify-center gap-3.5 mb-7 flex-wrap">
             <Link
               to="/register"
-              className="px-5 py-2.5 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all"
+              className="h-11 px-6 rounded-md bg-wm-accent text-wm-accent-contrast font-medium text-sm hover:opacity-90 active:translate-y-[1px] transition-all inline-flex items-center justify-center"
             >
               Get Started
             </Link>
             <Link
               to="/login"
-              className="px-5 py-2.5 rounded-md border border-wm-border bg-wm-surface text-wm-text font-normal text-xs hover:bg-wm-surface-2 active:translate-y-[1px] transition-all"
+              className="h-11 px-6 rounded-md border border-wm-border bg-wm-surface text-wm-text font-normal text-sm hover:bg-wm-surface-2 active:translate-y-[1px] transition-all inline-flex items-center justify-center"
             >
               Sign In
             </Link>

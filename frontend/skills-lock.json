@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "premium-frontend-ui": {
+      "source": "github/awesome-copilot",
+      "commit": "f10fdb8b2660ce85c98f220b2f1ca24653768a5c",
+      "sourceType": "github",
+      "skillPath": "skills/premium-frontend-ui/SKILL.md",
+      "computedHash": "4f538622d5894bd3aac7218faeffe7f8bddd6bb6ca8f4c97632d5bc445d74f94"
+    }
+  }
+}
