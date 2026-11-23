@@ -79,31 +79,20 @@ export default function LandingNavbar(): React.JSX.Element {
               {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
             </button>
 
-            {user ? (
-              <Link
-                to="/dashboard"
-                style={{ color: '#ffffff' }}
-                className="hidden sm:inline-flex h-9 px-4 rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 items-center justify-center"
-              >
-                Get Started
-              </Link>
-            ) : (
-              <>
-                <Link
-                  to="/login"
-                  className="hidden sm:inline-flex text-xs font-normal text-wm-muted hover:text-wm-text transition-colors duration-200 items-center justify-center px-1"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  to="/register"
-                  style={{ color: '#ffffff' }}
-                  className="hidden sm:inline-flex h-9 px-4 rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 items-center justify-center"
-                >
-                  Get Started
-                </Link>
-              </>
-            )}
+            {/* Always display Sign In and Get Started to prevent confusion */}
+            <Link
+              to="/login"
+              className="hidden sm:inline-flex text-xs font-normal text-wm-muted hover:text-wm-text transition-colors duration-200 items-center justify-center px-1"
+            >
+              Sign In
+            </Link>
+            <Link
+              to={user ? "/dashboard" : "/register"}
+              style={{ color: '#ffffff' }}
+              className="hidden sm:inline-flex h-9 px-4 rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 items-center justify-center"
+            >
+              Get Started
+            </Link>
 
             {/* Mobile Hamburger Toggle Button */}
             <button
@@ -144,36 +133,23 @@ export default function LandingNavbar(): React.JSX.Element {
               </a>
             </div>
 
-            {/* Mobile Auth Actions */}
+            {/* Mobile Auth Actions — always show both */}
             <div className="pt-3 border-t border-dashed border-wm-border flex flex-col gap-2">
-              {user ? (
-                <Link
-                  to="/dashboard"
-                  onClick={() => setMobileOpen(false)}
-                  style={{ color: '#ffffff' }}
-                  className="h-10 w-full rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 flex items-center justify-center"
-                >
-                  Go to Dashboard
-                </Link>
-              ) : (
-                <>
-                  <Link
-                    to="/register"
-                    onClick={() => setMobileOpen(false)}
-                    style={{ color: '#ffffff' }}
-                    className="h-10 w-full rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 flex items-center justify-center"
-                  >
-                    Get Started
-                  </Link>
-                  <Link
-                    to="/login"
-                    onClick={() => setMobileOpen(false)}
-                    className="h-10 w-full rounded-md border border-wm-border bg-wm-surface text-wm-text font-normal text-xs hover:bg-wm-surface-2 transition-all duration-200 flex items-center justify-center"
-                  >
-                    Sign In
-                  </Link>
-                </>
-              )}
+              <Link
+                to={user ? "/dashboard" : "/register"}
+                onClick={() => setMobileOpen(false)}
+                style={{ color: '#ffffff' }}
+                className="h-10 w-full rounded-md bg-wm-accent text-wm-primary-foreground text-white font-medium text-xs hover:opacity-90 active:translate-y-[1px] transition-all duration-200 flex items-center justify-center"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/login"
+                onClick={() => setMobileOpen(false)}
+                className="h-10 w-full rounded-md border border-wm-border bg-wm-surface text-wm-text font-normal text-xs hover:bg-wm-surface-2 transition-all duration-200 flex items-center justify-center"
+              >
+                Sign In
+              </Link>
             </div>
           </div>
         )}
